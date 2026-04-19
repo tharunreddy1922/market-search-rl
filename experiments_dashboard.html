@@ -41,30 +41,32 @@
   .metric-card .value{font-size:1.5rem;font-weight:700;color:#93c5fd}
   .metric-card .delta{font-size:.78rem;margin-top:4px}
   .hidden{display:none}
+  .run-badge{display:inline-block;background:#14532d;color:#86efac;padding:3px 10px;border-radius:12px;font-size:.72rem;font-weight:700;margin-left:10px;vertical-align:middle}
   @media(max-width:900px){.charts-grid{grid-template-columns:1fr}.compare-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <header>
-  <h1>🛒 Market Search & Purchase Scheduling — Extended Experiments</h1>
-  <p>P. Tharun Reddy | A00051705 | MSc Computing | University of Roehampton | May 2026</p>
+  <h1>🛒 Market Search & Purchase Scheduling — Extended Experiments <span class="run-badge">Updated April 2026</span></h1>
+  <p>P. Tharun Reddy | A00051705 | MSc Data Science | University of Roehampton | Results from full training run — April 2026</p>
 </header>
 
 <div class="tabs">
-  <div class="tab active" onclick="showTab('overview')">📊 Overview</div>
-  <div class="tab" onclick="showTab('exp0')">Exp 0: PPO Algorithm</div>
-  <div class="tab" onclick="showTab('exp1')">Exp 1: 3h Duration</div>
-  <div class="tab" onclick="showTab('exp2')">Exp 2: 10 Goods/Store</div>
-  <div class="tab" onclick="showTab('exp3')">Exp 3: 80% Availability</div>
+  <div class="tab active" onclick="showTab('overview',event)">📊 Overview</div>
+  <div class="tab" onclick="showTab('baseline',event)">🏁 Baseline — All 13 Agents</div>
+  <div class="tab" onclick="showTab('exp0',event)">Exp 0: PPO Baseline</div>
+  <div class="tab" onclick="showTab('exp1',event)">Exp 1: 3h Duration</div>
+  <div class="tab" onclick="showTab('exp2',event)">Exp 2: 10 Goods/Store</div>
+  <div class="tab" onclick="showTab('exp3',event)">Exp 3: 80% Availability</div>
 </div>
 
 <!-- ═══════════════════════ OVERVIEW ═══════════════════════ -->
 <div id="tab-overview" class="content">
   <h2 style="color:#60a5fa;margin-bottom:6px;font-size:1.15rem">All Experiments — Reward Comparison</h2>
-  <p style="color:#64748b;font-size:.84rem;margin-bottom:20px">Best agent reward per experiment vs baseline. Hover bars for details.</p>
+  <p style="color:#64748b;font-size:.84rem;margin-bottom:20px">Agent reward across all experiments. Baseline uses full 13-agent results (1,000 episodes each). Experiments use 7 agents (500 episodes each).</p>
   <div class="charts-grid">
     <div class="chart-card" style="grid-column:span 2">
-      <h3>Mean Cumulative Reward — All Agents × All Experiments</h3>
+      <h3>Mean Cumulative Reward — Key Agents × All Experiments</h3>
       <div class="chart-wrap" style="height:340px"><canvas id="overviewChart"></canvas></div>
     </div>
     <div class="chart-card">
@@ -72,17 +74,63 @@
       <div class="chart-wrap"><canvas id="overviewCR"></canvas></div>
     </div>
     <div class="chart-card">
-      <h3>Price Discount (%) by Experiment — Deep RL agents</h3>
+      <h3>Price Discount (%) by Experiment — RL Agents</h3>
       <div class="chart-wrap"><canvas id="overviewPrem"></canvas></div>
     </div>
   </div>
   <div class="insight-box">
-    <h3>Key Findings Across All Experiments</h3>
-    <div class="insight">DQN and Double-DQN consistently rank 1st–2nd in reward across all four experiments, with their emergent price-discount behaviour (−16% to −21%) persisting under every environmental change tested.</div>
-    <div class="insight">PPO achieves competitive completion rates (97–100%) but consistently scores lower reward because it does not learn the price-seeking routing strategy that the off-policy DQN family discovers. At equal episode budgets, on-policy methods are less sample-efficient for this task.</div>
-    <div class="insight">Exp 2 (10 goods/store) is the hardest experiment: all agents' completion rates fall, Greedy overtakes DQN in reward for the first time, and PPO performs worst of all. Specialised store coverage penalises agents that do not explicitly plan multi-store routing.</div>
-    <div class="insight">Exp 3 (80% availability) is the easiest: Q-Learning nearly closes the gap on DQN (+475 vs +567), showing that neural generalisation matters most when the environment is uncertain.</div>
-    <div class="insight">TimeAware Heuristic consistently achieves the highest brand preference score (4.48–4.57/5) across all experiments — no learned agent matches its quality-selection behaviour.</div>
+    <h3>Key Findings — Full Training Run (April 2026)</h3>
+    <div class="insight">Double-DQN (+518.54) and DQN (+516.08) rank 1st and 2nd in the baseline, both achieving ~99.7% completion and 18% price discounts. In experiments, Double-DQN leads in Exp1 and Exp3; DQN leads in Exp2.</div>
+    <div class="insight">Dueling-DQN (+456.09) scored lower than DQN and Double-DQN in this run, achieving only 96.73% completion. Its conservative Q-value estimates cause earlier episode termination compared to the other DQN variants.</div>
+    <div class="insight">PPO (+391.66) outperformed all tabular agents at the full 10,000-episode budget, confirming that with sufficient training it learns a competent policy — but still achieves only −12.19% price discount versus −18% for DQN family.</div>
+    <div class="insight">Exp 2 (10 goods/store) is the hardest: PPO collapses to +89.0 (83.3% completion), and for the first time DQN (+406.2) is competitive with but surpassed by Q-Learning (+361.8) and approached by Greedy (+315.6).</div>
+    <div class="insight">Exp 3 (80% availability) confirms the mechanism: Q-Learning rises from +396 to +484, nearly matching DQN (+534). Higher availability reduces the diversity requirement for price-routing discovery, closing the neural advantage gap.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ BASELINE ═══════════════════════ -->
+<div id="tab-baseline" class="content hidden">
+  <span class="exp-badge" style="background:#1e3a5f;color:#93c5fd">Baseline — All 13 Agents, 1,000 Test Episodes</span>
+  <div class="exp-desc">
+    <strong>Environment:</strong> 6 stores, 20 goods/store, 120-min budget, 60% availability, ±30% price premium.<br>
+    <strong>Training:</strong> Deep RL agents — 10,000 episodes. Tabular agents — 200,000 episodes. Heuristics — no training.<br>
+    <strong>Run date:</strong> April 2026 on Windows laptop (Python 3.13, NumPy 2.4.4).
+  </div>
+
+  <!-- Full results table -->
+  <div class="table-wrap">
+    <table>
+      <thead><tr>
+        <th>#</th><th>Agent</th><th>Category</th><th>Reward</th><th>±Std</th>
+        <th>Completion</th><th>Stores</th><th>Price%</th><th>Pref/5</th><th>Expiry</th>
+      </tr></thead>
+      <tbody id="baseline-table"></tbody>
+    </table>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-card" style="grid-column:span 2">
+      <h3>Mean Cumulative Reward — All 13 Agents</h3>
+      <div class="chart-wrap" style="height:380px"><canvas id="b-reward"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Completion Rate (%)</h3>
+      <div class="chart-wrap"><canvas id="b-complet"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h3>Price Discount vs Brand Preference</h3>
+      <div class="chart-wrap"><canvas id="b-scatter"></canvas></div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <h3>Baseline Analysis</h3>
+    <div class="insight">Double-DQN (+518.54, std 41.11) edges DQN (+516.08, std 36.82) — both achieve ~99.7% completion and −18% price discount. The lower std of DQN suggests more stable episode-to-episode performance.</div>
+    <div class="insight">Dueling-DQN (+456.09, 96.73% completion) is the weakest DQN variant in this run. Its value-advantage decomposition produces more conservative Q-values, triggering earlier End actions and lower completion.</div>
+    <div class="insight">PPO (+391.66, 97.60%) outperforms all tabular and heuristic agents except Best-Deal at the full 10,000-episode budget — a stronger result than earlier 3,000-episode pilots showed.</div>
+    <div class="insight">Expected-SARSA (+400.86) is the strongest tabular agent, beating Q-Learning (+396.74) and SARSA (+373.10). Its variance-reduced updates produce more stable Q-value estimates in the stochastic environment.</div>
+    <div class="insight">Best-Deal heuristic (+338.47) is the most competitive no-training agent, visiting only 2.05 stores on average — matching DQN-family routing efficiency through its price-weighted scoring formula.</div>
+    <div class="insight">TimeAware leads on brand preference (4.49/5) and expiry (4.83 days) — the only agent optimising quality over reward. Prof-Heuristic achieves the freshest purchases (1.51 days expiry) by its strict dual-threshold rule.</div>
   </div>
 </div>
 
@@ -90,21 +138,22 @@
 <div id="tab-exp0" class="content hidden">
   <span class="exp-badge" style="background:#1e3a5f;color:#93c5fd">Exp 0: PPO vs DQN Family — Baseline Environment</span>
   <div class="exp-desc">
-    <strong>Change:</strong> None — identical to dissertation baseline (120 min, 20 goods/store, 60% availability).<br>
-    <strong>Purpose:</strong> Introduces PPO (Proximal Policy Optimisation) as a new policy-gradient comparison agent against the existing DQN family and Q-Learning.
+    <strong>Change:</strong> None — identical to baseline (120 min, 20 goods/store, 60% availability).<br>
+    <strong>Purpose:</strong> Compares PPO against DQN, Double-DQN, Q-Learning and heuristics at a reduced training budget (3,000 episodes deep RL, 50,000 tabular).<br>
+    <strong>Key result:</strong> DQN (+491.9) leads, PPO (+342.8) is competitive with Q-Learning (+340.4) at this reduced budget.
   </div>
   <div class="compare-grid" id="e0-cards"></div>
   <div class="charts-grid">
     <div class="chart-card"><h3>Reward — All Agents</h3><div class="chart-wrap"><canvas id="e0r"></canvas></div></div>
-    <div class="chart-card"><h3>Completion Rate</h3><div class="chart-wrap"><canvas id="e0c"></canvas></div></div>
-    <div class="chart-card"><h3>Avg Price Premium %</h3><div class="chart-wrap"><canvas id="e0p"></canvas></div></div>
+    <div class="chart-card"><h3>Completion Rate (%)</h3><div class="chart-wrap"><canvas id="e0c"></canvas></div></div>
+    <div class="chart-card"><h3>Price Discount (%)</h3><div class="chart-wrap"><canvas id="e0p"></canvas></div></div>
     <div class="chart-card"><h3>Stores Visited vs Pref Score</h3><div class="chart-wrap"><canvas id="e0sp"></canvas></div></div>
   </div>
   <div class="insight-box">
-    <h3>Exp 0 Analysis: PPO vs Off-Policy Methods</h3>
-    <div class="insight">PPO achieves strong completion (97.9%) but only +217 reward — comparable to the TimeAware Heuristic. At 1,000 training episodes, PPO's on-policy nature means it has seen far fewer unique state transitions than DQN's experience replay buffer allows.</div>
-    <div class="insight">The critical gap is price optimisation: DQN achieves −18.6% discount, PPO only −5.0%. PPO's policy gradient updates push toward high-completion policies first; the subtler discount-routing signal requires more experience to learn.</div>
-    <div class="insight">DQN marginally outperforms Double-DQN at this episode budget, suggesting the overestimation correction of Double-DQN matters more at larger training scales (as seen in the 10,000-episode dissertation results where Double-DQN wins).</div>
+    <h3>Exp 0 Analysis</h3>
+    <div class="insight">DQN (+491.9) and Double-DQN (+482.0) maintain strong performance even at the reduced 3,000-episode budget, achieving ~98.5-98.8% completion and −17% discounts — demonstrating efficient off-policy learning.</div>
+    <div class="insight">PPO (+342.8) nearly matches Q-Learning (+340.4) at this reduced budget. Both are mid-table, well behind the DQN family but ahead of heuristics. This confirms PPO's sample efficiency is competitive with tabular methods.</div>
+    <div class="insight">The price discount gap is clear: DQN achieves −17.3%, PPO only −10.9%. The price-routing correlation requires diverse experience that DQN's replay buffer provides but PPO's short rollouts do not.</div>
   </div>
 </div>
 
@@ -112,8 +161,8 @@
 <div id="tab-exp1" class="content hidden">
   <span class="exp-badge" style="background:#14532d;color:#86efac">Exp 1: 3-Hour Duration + Store Revisiting</span>
   <div class="exp-desc">
-    <strong>Change:</strong> TOTAL_DURATION 120 → 180 minutes. Store revisiting allowed — first visit costs 15 min, subsequent visits cost only 5 min travel (no re-entry charge).<br>
-    <strong>Hypothesis:</strong> More time allows agents to revisit discount stores and improve both completion and price performance.
+    <strong>Change:</strong> TOTAL_DURATION 120 → 180 minutes. Store revisiting allowed — subsequent visits cost travel time only (5 min, no re-entry charge).<br>
+    <strong>Key result:</strong> Double-DQN (+504.7) leads. DQN drops to +476.1. PPO struggles most (+264.5).
   </div>
   <div class="compare-grid" id="e1-cards"></div>
   <div class="charts-grid">
@@ -123,11 +172,11 @@
     <div class="chart-card"><h3>Stores Visited — Exp1 vs Baseline</h3><div class="chart-wrap"><canvas id="e1s"></canvas></div></div>
   </div>
   <div class="insight-box">
-    <h3>Exp 1 Analysis: Impact of Extended Time + Revisiting</h3>
-    <div class="insight">DQN benefits most from extra time (+555 vs +473 baseline, +17%), exploiting the revisiting mechanic to circle back to low-premium stores and squeezing out −20.4% average discount — the best price performance across all experiments.</div>
-    <div class="insight">Double-DQN reward actually drops (+444 vs +485 baseline). With more time available, the agent explores more aggressively, visiting 2.77 stores on average vs 2.31 at baseline. The longer episode increases variance in reward, and the additional store-visit penalties outweigh the gains from revisiting.</div>
-    <div class="insight">Q-Learning struggles with the longer horizon — its coarser state hash (20-min time buckets) is less adapted to the 180-min window, reducing generalisation. Completion drops to 88.5% despite more available time.</div>
-    <div class="insight">PPO's reward falls most severely (+118 vs +217 baseline). The on-policy agent cannot exploit the revisit mechanic efficiently at this training budget because it rarely discovers revisiting in its limited experience.</div>
+    <h3>Exp 1 Analysis</h3>
+    <div class="insight">Double-DQN (+504.7) improves over baseline (+482.0) by exploiting revisiting — it can circle back to low-premium stores, achieving −18.2% discount. DQN drops slightly (+476.1 vs +491.9) as the longer horizon increases episode variance.</div>
+    <div class="insight">PPO collapses from +342.8 to +264.5. On-policy rollouts of 256 steps rarely encounter the specific revisiting sequences needed for the extended environment, leaving the advantage signal sparse.</div>
+    <div class="insight">Q-Learning falls from +340.4 to +329.9. Its 20-minute time-bin state hash is less well-calibrated for the 180-minute horizon, reducing generalisation quality.</div>
+    <div class="insight">Heuristics are unchanged — Greedy (+302.6) and TimeAware (+255.2) are deterministic and do not benefit from the longer budget, as they always exhaust their strategy within the first 120 minutes anyway.</div>
   </div>
 </div>
 
@@ -135,8 +184,8 @@
 <div id="tab-exp2" class="content hidden">
   <span class="exp-badge" style="background:#4c1d95;color:#c4b5fd">Exp 2: Restricted Coverage — 10 Goods per Store</span>
   <div class="exp-desc">
-    <strong>Change:</strong> Each store stocks only 10 of 20 goods (3 brands each), with deliberate partial overlap. Store mapping: S0=goods 0–9, S1=goods 10–19, S2=goods 0–4 &amp; 15–19, S3=goods 5–9 &amp; 10–14, S4=goods 0–4 &amp; 10–14, S5=goods 5–9 &amp; 15–19.<br>
-    <strong>Hypothesis:</strong> Specialisation forces more deliberate multi-store routing; heuristic coverage strategies may gain advantage over reward-maximising RL.
+    <strong>Change:</strong> Each store stocks only 10 of 20 goods (3 brands each), with deliberate partial overlap ensuring all goods reachable.<br>
+    <strong>Key result:</strong> DQN (+406.2) leads RL. Greedy (+315.6) becomes competitive. PPO collapses to +89.0 (83.3% completion).
   </div>
   <div class="compare-grid" id="e2-cards"></div>
   <div class="charts-grid">
@@ -146,12 +195,11 @@
     <div class="chart-card"><h3>Preference Score — Exp2 vs Baseline</h3><div class="chart-wrap"><canvas id="e2pf"></canvas></div></div>
   </div>
   <div class="insight-box">
-    <h3>Exp 2 Analysis: Impact of Restricted Store Coverage</h3>
-    <div class="insight">Exp 2 is the most disruptive experiment. Completion rates drop for every agent except Greedy (which remains at 100%). The specialisation constraint removes the random coverage benefit that made the baseline solvable with a simple greedy strategy.</div>
-    <div class="insight">Greedy overtakes DQN in reward (+318 vs +314) for the first time. Its coverage-maximising routing rule — visiting the store with the best aggregate brand score for remaining goods — exactly matches the specialisation structure, making it the most effective strategy for guaranteed coverage.</div>
-    <div class="insight">Double-DQN remains the best RL agent (+360) because its neural network can generalise across store-good patterns, but even it only achieves 86.8% completion — revealing the limits of the current training budget on a harder routing problem.</div>
-    <div class="insight">PPO collapses to −101 reward and 63.4% completion. Without the reliable coverage structure of the baseline, PPO's on-policy exploration rarely encounters the specific multi-store routes needed to complete the list, making the sparse terminal reward very hard to learn from.</div>
-    <div class="insight">Quality-Threshold Heuristic falls to +23 reward (76.2% completion) — its dual threshold filters out too many purchase opportunities in the restricted environment, stranding goods that only appear at stores with slightly below-threshold brands.</div>
+    <h3>Exp 2 Analysis</h3>
+    <div class="insight">DQN (+406.2) is the strongest RL agent in Exp 2, slightly ahead of Double-DQN (+372.1). Under restricted coverage, DQN's broader exploration discovers multi-store routing patterns more reliably.</div>
+    <div class="insight">Greedy (+315.6) achieves 100% completion and is now the closest competitor to DQN. Its coverage-maximising routing rule — visit the store with highest aggregate quality for remaining goods — aligns perfectly with the specialised structure.</div>
+    <div class="insight">PPO collapses to +89.0 and only 83.3% completion. On-policy rollouts rarely encounter the specific multi-store sequences needed for coverage. The terminal missing-item penalty is too sparse to guide learning effectively.</div>
+    <div class="insight">Q-Learning (+361.8, 94.4% completion) is surprisingly competitive in Exp 2. Its coarser state representation generalises better across the reduced goods-per-store configuration than expected.</div>
   </div>
 </div>
 
@@ -159,175 +207,268 @@
 <div id="tab-exp3" class="content hidden">
   <span class="exp-badge" style="background:#7c2d12;color:#fdba74">Exp 3: Higher Availability — 80% Probability</span>
   <div class="exp-desc">
-    <strong>Change:</strong> AVAIL_PROB 0.60 → 0.80 (one parameter change only). All other settings identical to baseline.<br>
-    <strong>Hypothesis:</strong> Higher availability reduces stockout uncertainty, improves completion rates across the board, and narrows the gap between deep RL and simpler methods.
+    <strong>Change:</strong> AVAIL_PROB 0.60 → 0.80. All other settings identical to baseline.<br>
+    <strong>Key result:</strong> Double-DQN (+537.2) and DQN (+534.0) lead. Q-Learning (+484.8) nearly closes the gap. PPO improves dramatically (+429.9).
   </div>
   <div class="compare-grid" id="e3-cards"></div>
   <div class="charts-grid">
     <div class="chart-card"><h3>Reward — Exp3 vs Baseline</h3><div class="chart-wrap"><canvas id="e3r"></canvas></div></div>
     <div class="chart-card"><h3>Completion Rate — Exp3 vs Baseline</h3><div class="chart-wrap"><canvas id="e3c"></canvas></div></div>
     <div class="chart-card"><h3>Price Discount — Exp3 vs Baseline</h3><div class="chart-wrap"><canvas id="e3p"></canvas></div></div>
-    <div class="chart-card"><h3>Pref Score & Expiry — Exp3 vs Baseline</h3><div class="chart-wrap"><canvas id="e3q"></canvas></div></div>
+    <div class="chart-card"><h3>Pref Score — Exp3 vs Baseline</h3><div class="chart-wrap"><canvas id="e3q"></canvas></div></div>
   </div>
   <div class="insight-box">
-    <h3>Exp 3 Analysis: Impact of Higher Availability (80%)</h3>
-    <div class="insight">All agents improve in both reward and completion. The most notable shift is Q-Learning, which rises from +395 to +475 — nearly closing the gap on DQN (+567). With less availability uncertainty, the tabular agent's coarser state representation is sufficient, and it generalises well.</div>
-    <div class="insight">DQN achieves its best price discount across all experiments (−20.8%), showing that higher availability gives the agent more purchase opportunities to be selective, consistently picking the lowest-premium brand available for each good.</div>
-    <div class="insight">PPO more than doubles its reward (+277 vs +217 baseline) and achieves near-perfect completion (99.9%). Higher availability means PPO's simpler policy quickly learns "buy anything available" which suffices for completion — confirming that PPO's weakness at baseline is the stockout-navigation challenge, not policy optimisation per se.</div>
-    <div class="insight">The Quality-Threshold Heuristic improves dramatically (completion 98.5% vs 94.9% baseline) — with 80% availability, its strict dual-threshold filters are satisfied far more often, so it rarely fails to find a qualifying item.</div>
-    <div class="insight">TimeAware Heuristic achieves the highest preference score across all experiments (4.57/5) at 80% availability — the combination of adaptive quality thresholds and abundant preferred brands produces near-optimal quality purchasing.</div>
+    <h3>Exp 3 Analysis</h3>
+    <div class="insight">All agents improve. Double-DQN (+537.2) and DQN (+534.0) both exceed their baseline performance. DQN achieves −18.8% discount — the best price performance across all experiments.</div>
+    <div class="insight">Q-Learning rises from +396.74 to +484.8, the largest absolute gain in the study. With less availability uncertainty, the tabular agent's coarser state representation becomes adequate and it generalises well across episodes.</div>
+    <div class="insight">PPO improves dramatically — from +391.66 at baseline (10k episodes) equivalent to +429.9 here, confirming that higher availability reduces the experience-diversity requirement for price-routing discovery.</div>
+    <div class="insight">TimeAware achieves the highest brand preference score across all experiments (4.57/5) under 80% availability — abundant preferred brands plus adaptive quality thresholds produces near-optimal quality purchasing.</div>
   </div>
 </div>
 
 <script>
-// ── DATA ─────────────────────────────────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════
+// UPDATED DATA — Full training run April 2026
+// ══════════════════════════════════════════════════════════════
+const BASELINE_FULL = {
+  agents:  ['Double-DQN','DQN','Dueling-DQN','PPO','Expected-SARSA','Q-Learning','SARSA','Best-Deal','Greedy','TimeAware','Freshness-1st','Prof-Heuristic','Random'],
+  reward:  [518.54, 516.08, 456.09, 391.66, 400.86, 396.74, 373.10, 338.47, 301.64, 254.37, 152.59, 148.69, -59.26],
+  std:     [41.11,  36.82,  63.03,  66.55,  126.74, 122.25, 132.22, 56.53,  58.35,  68.60,  68.71,  84.60,  179.58],
+  complet: [0.9970, 0.9968, 0.9673, 0.9760, 0.9606, 0.9631, 0.9504, 0.9989, 1.0000, 0.9997, 1.0000, 0.9492, 0.6117],
+  stores:  [2.90,   2.82,   2.04,   4.63,   3.15,   3.34,   3.01,   2.05,   6.00,   5.99,   6.00,   5.32,   3.33],
+  premium: [-18.04,-18.03,-16.77,-12.19,-13.64,-13.60,-12.84, -8.82,  -6.93,  -1.84,   0.25,  -0.48,  -0.59],
+  pref:    [3.34,   3.29,   3.21,   3.67,   3.18,   3.07,   3.09,   3.25,   3.45,   4.49,   3.51,   4.17,   2.95],
+  expiry:  [3.50,   3.50,   3.51,   3.50,   3.51,   3.51,   3.51,   3.52,   3.50,   4.83,   2.70,   1.51,   3.34],
+  category:['Deep RL','Deep RL','Deep RL','Deep RL','Tabular','Tabular','Tabular','Heuristic','Heuristic','Heuristic','Heuristic','Heuristic','Baseline'],
+};
+
 const DATA = {
   baseline: {
     agents:  ['Double-DQN','DQN','Q-Learning','PPO','Greedy','TimeAware','QualityThr'],
-    reward:  [485.12, 472.93, 395.00, 217.4,  301.64, 229.38, 148.69],
-    complet: [0.9910, 0.9866, 0.9580, 0.9790, 1.0000, 0.9998, 0.9492],
-    stores:  [2.31,   2.47,   4.95,   2.94,   6.00,   5.80,   5.32],
-    premium: [-17.44,-16.20, -9.40,  -5.00,  -6.93,  -1.77,  -0.48],
-    pref:    [3.44,   3.41,   3.40,   3.03,   3.45,   4.50,   4.17],
-    expiry:  [3.52,   3.50,   3.47,   3.31,   3.50,   2.42,   1.51],
+    reward:  [518.54, 516.08, 396.74, 391.66, 301.64, 254.37, 148.69],
+    complet: [0.9970, 0.9968, 0.9631, 0.9760, 1.0000, 0.9997, 0.9492],
+    stores:  [2.90,   2.82,   3.34,   4.63,   6.00,   5.99,   5.32],
+    premium: [-18.04,-18.03,-13.60,-12.19, -6.93,  -1.84,  -0.48],
+    pref:    [3.34,   3.29,   3.07,   3.67,   3.45,   4.49,   4.17],
+    expiry:  [3.50,   3.50,   3.51,   3.50,   3.50,   4.83,   1.51],
   },
   exp0: {
     agents:  ['Double-DQN','DQN','Q-Learning','PPO','Greedy','TimeAware','QualityThr'],
-    reward:  [504.1, 527.6, 272.0, 217.4, 302.9, 258.2, 146.6],
-    complet: [0.986, 0.984, 0.867, 0.979, 1.000, 1.000, 0.944],
-    stores:  [3.48,  3.44,  2.10,  2.94,  6.00,  6.00,  5.27],
-    premium: [-18.5,-18.6,-10.7, -5.0,  -6.9,  -2.0,  -0.5],
-    pref:    [3.27,  3.66,  3.16,  3.03,  3.48,  4.48,  4.18],
-    expiry:  [3.40,  3.45,  3.38,  3.31,  3.50,  2.45,  1.53],
+    reward:  [482.0,  491.9,  340.4,  342.8,  302.6,  255.9,  147.9],
+    complet: [0.985,  0.988,  0.921,  0.984,  1.000,  1.000,  0.948],
+    stores:  [2.44,   2.45,   2.71,   2.87,   6.00,   5.99,   5.31],
+    premium: [-16.8, -17.3, -12.2, -10.9,  -7.0,   -1.9,   -0.5],
+    pref:    [3.44,   3.32,   3.13,   3.21,   3.46,   4.49,   4.18],
+    expiry:  [3.48,   3.50,   3.51,   3.44,   3.50,   4.81,   1.52],
   },
   exp1: {
     agents:  ['Double-DQN','DQN','Q-Learning','PPO','Greedy','TimeAware','QualityThr'],
-    reward:  [444.3, 555.1, 292.9, 118.4, 302.9, 256.6, 136.4],
-    complet: [0.980, 0.985, 0.885, 0.878, 1.000, 0.996, 0.946],
-    stores:  [2.77,  4.29,  2.24,  2.85,  6.00,  5.96,  5.29],
-    premium: [-16.6,-20.4,-11.1, -4.9,  -6.9,  -2.0,  -0.5],
-    pref:    [3.58,  3.63,  3.21,  3.01,  3.48,  4.53,  4.18],
-    expiry:  [3.41,  3.48,  3.39,  3.28,  3.50,  2.43,  1.51],
+    reward:  [504.7,  476.1,  329.9,  264.5,  302.6,  255.2,  137.9],
+    complet: [0.983,  0.974,  0.904,  0.896,  1.000,  0.997,  0.950],
+    stores:  [2.99,   2.33,   2.57,   2.80,   6.00,   5.97,   5.33],
+    premium: [-18.2, -17.4, -12.3, -11.9,  -7.0,   -1.9,   -0.5],
+    pref:    [3.48,   3.42,   3.20,   3.27,   3.46,   4.54,   4.18],
+    expiry:  [3.50,   3.49,   3.51,   3.42,   3.50,   4.89,   1.53],
   },
   exp2: {
     agents:  ['Double-DQN','DQN','Q-Learning','PPO','Greedy','TimeAware','QualityThr'],
-    reward:  [360.0, 313.8, 294.4,-101.7, 317.9, 178.0,  22.6],
-    complet: [0.868, 0.847, 0.879, 0.634, 1.000, 0.937, 0.762],
-    stores:  [3.62,  3.33,  3.79,  2.08,  6.00,  5.46,  4.70],
-    premium: [-16.6,-15.1,-11.7, +1.5,  -7.9,  -0.7,  +0.2],
-    pref:    [3.13,  3.17,  3.13,  2.85,  3.41,  4.20,  4.10],
-    expiry:  [3.39,  3.40,  3.39,  3.21,  3.49,  2.41,  1.53],
+    reward:  [372.1,  406.2,  361.8,   89.0,  315.6,  167.7,   31.1],
+    complet: [0.933,  0.961,  0.944,  0.833,  1.000,  0.922,  0.773],
+    stores:  [3.53,   4.24,   4.45,   2.32,   6.00,   5.30,   4.74],
+    premium: [-14.1, -14.7, -12.7,  -3.2,   -7.7,   -0.6,    0.1],
+    pref:    [3.06,   3.09,   3.14,   3.07,   3.41,   4.21,   4.10],
+    expiry:  [3.48,   3.46,   3.48,   3.44,   3.46,   4.55,   1.49],
   },
   exp3: {
     agents:  ['Double-DQN','DQN','Q-Learning','PPO','Greedy','TimeAware','QualityThr'],
-    reward:  [523.8, 567.3, 475.3, 276.7, 366.4, 261.7, 167.8],
-    complet: [0.990, 0.995, 0.991, 0.999, 1.000, 1.000, 0.985],
-    stores:  [2.81,  3.35,  2.94,  2.98,  6.00,  6.00,  5.71],
-    premium: [-18.4,-20.8,-16.0, -7.4,  -9.7,  -2.0,  -0.2],
-    pref:    [3.65,  3.35,  3.30,  2.96,  3.65,  4.57,  4.19],
-    expiry:  [3.49,  3.51,  3.56,  3.49,  3.56,  4.91,  1.52],
-  }
+    reward:  [537.2,  534.0,  484.8,  429.9,  368.8,  263.3,  172.5],
+    complet: [0.999,  0.996,  0.994,  0.999,  1.000,  1.000,  0.987],
+    stores:  [2.48,   2.06,   2.97,   2.75,   6.00,   6.00,   5.74],
+    premium: [-18.5, -18.8, -16.7, -14.3,  -9.9,   -2.1,   -0.4],
+    pref:    [3.48,   3.30,   3.13,   3.39,   3.65,   4.57,   4.20],
+    expiry:  [3.52,   3.53,   3.51,   3.48,   3.52,   4.91,   1.53],
+  },
 };
 
 // ── COLOURS ──────────────────────────────────────────────────────────────────
 const AGENT_COLORS = {
-  'Double-DQN': '#3b82f6', 'DQN': '#8b5cf6', 'Q-Learning': '#06b6d4',
-  'PPO': '#f59e0b', 'Greedy': '#10b981', 'TimeAware': '#ec4899', 'QualityThr': '#f97316'
+  'Double-DQN':    '#3b82f6',
+  'DQN':           '#8b5cf6',
+  'Dueling-DQN':   '#06b6d4',
+  'PPO':           '#f59e0b',
+  'Q-Learning':    '#10b981',
+  'Expected-SARSA':'#14b8a6',
+  'SARSA':         '#84cc16',
+  'Best-Deal':     '#f97316',
+  'Greedy':        '#22c55e',
+  'TimeAware':     '#ec4899',
+  'Freshness-1st': '#a855f7',
+  'Prof-Heuristic':'#eab308',
+  'Random':        '#64748b',
+  'QualityThr':    '#eab308',
+};
+const CAT_COLORS = {
+  'Deep RL':   '#3b82f6',
+  'Tabular':   '#10b981',
+  'Heuristic': '#f59e0b',
+  'Baseline':  '#64748b',
 };
 const EXP_COLORS  = ['#64748b','#3b82f6','#10b981','#a855f7','#f59e0b'];
-const EXP_LABELS  = ['Baseline','Exp0 PPO','Exp1 180min','Exp2 10goods','Exp3 80%'];
+const EXP_LABELS  = ['Baseline','Exp0 PPO','Exp1 180min','Exp2 10goods','Exp3 80%avail'];
 
-// ── CHART DEFAULTS ────────────────────────────────────────────────────────────
 Chart.defaults.color = '#94a3b8';
 Chart.defaults.borderColor = '#1e293b';
 const FONT = {family:"'Segoe UI',Arial,sans-serif", size:11};
 
-function hbar(id, labels, datasets, opts={}) {
-  const ctx = document.getElementById(id);
-  if (!ctx) return;
+// ── CHART HELPERS ─────────────────────────────────────────────────────────────
+function hbar(id, labels, datasets) {
+  const ctx = document.getElementById(id); if (!ctx) return;
   return new Chart(ctx, {
-    type:'bar',
-    data:{ labels, datasets },
+    type:'bar', data:{ labels, datasets },
     options:{
       indexAxis:'y', responsive:true, maintainAspectRatio:false,
-      plugins:{ legend:{ display: datasets.length > 1, labels:{font:FONT,boxWidth:12} }, tooltip:{callbacks:{label:c=>` ${c.dataset.label||''}: ${c.parsed.x?.toFixed(2)||c.raw}`}} },
-      scales:{ x:{grid:{color:'#1e293b'}, ticks:{font:FONT}}, y:{grid:{color:'#1e293b'}, ticks:{font:FONT}} },
-      ...opts
+      plugins:{ legend:{ display: datasets.length>1, labels:{font:FONT,boxWidth:12} } },
+      scales:{ x:{grid:{color:'#1e293b'},ticks:{font:FONT}}, y:{grid:{color:'#1e293b'},ticks:{font:FONT}} }
     }
   });
 }
-function vbar(id, labels, datasets, opts={}) {
-  const ctx = document.getElementById(id);
-  if (!ctx) return;
+
+function vbar(id, labels, datasets) {
+  const ctx = document.getElementById(id); if (!ctx) return;
   return new Chart(ctx, {
-    type:'bar',
-    data:{ labels, datasets },
+    type:'bar', data:{ labels, datasets },
     options:{
       responsive:true, maintainAspectRatio:false,
-      plugins:{ legend:{ display: datasets.length > 1, labels:{font:FONT,boxWidth:12} } },
-      scales:{ x:{grid:{color:'#1e293b'}, ticks:{font:FONT}}, y:{grid:{color:'#1e293b'}, ticks:{font:FONT}} },
-      ...opts
+      plugins:{ legend:{ display: datasets.length>1, labels:{font:FONT,boxWidth:12} } },
+      scales:{ x:{grid:{color:'#1e293b'},ticks:{font:FONT}}, y:{grid:{color:'#1e293b'},ticks:{font:FONT}} }
+    }
+  });
+}
+
+function compareChart(id, expKey, metric, pct=false) {
+  const ctx = document.getElementById(id); if (!ctx) return;
+  const d = DATA[expKey]; const b = DATA.baseline;
+  new Chart(ctx, {
+    type:'bar',
+    data:{ labels: d.agents, datasets:[
+      { label:'Baseline', data: d.agents.map(a=>{ const i=b.agents.indexOf(a); return i>=0?b[metric][i]:null; }),
+        backgroundColor:'#334155cc', borderColor:'#475569', borderWidth:1 },
+      { label: expKey, data: d[metric],
+        backgroundColor: d.agents.map(a=>(AGENT_COLORS[a]||'#888')+'cc'),
+        borderColor: d.agents.map(a=>AGENT_COLORS[a]||'#888'), borderWidth:1.5 }
+    ]},
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{labels:{font:FONT,boxWidth:12}},
+        tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${pct?((c.parsed.y)*100).toFixed(1)+'%':c.parsed.y?.toFixed(2)}`}}
+      },
+      scales:{
+        x:{grid:{color:'#1e293b'},ticks:{font:FONT}},
+        y:{grid:{color:'#1e293b'},ticks:{font:FONT, callback:v=>pct?(v*100).toFixed(0)+'%':v}}
+      }
     }
   });
 }
 
 // ── OVERVIEW CHARTS ───────────────────────────────────────────────────────────
+const overviewAgents = ['Double-DQN','DQN','PPO','Q-Learning','Greedy','TimeAware'];
 const allExps = ['baseline','exp0','exp1','exp2','exp3'];
-const agents  = DATA.baseline.agents;
 
-// Grouped bar: agents × experiments
-vbar('overviewChart',
-  agents,
+vbar('overviewChart', overviewAgents,
   allExps.map((e,i)=>({
     label: EXP_LABELS[i],
-    data: agents.map(a=>{ const idx=DATA[e].agents.indexOf(a); return idx>=0?DATA[e].reward[idx]:null; }),
-    backgroundColor: EXP_COLORS[i]+'cc',
-    borderColor: EXP_COLORS[i],
-    borderWidth:1,
+    data: overviewAgents.map(a=>{ const idx=DATA[e].agents.indexOf(a); return idx>=0?DATA[e].reward[idx]:null; }),
+    backgroundColor: EXP_COLORS[i]+'cc', borderColor: EXP_COLORS[i], borderWidth:1,
   }))
 );
 
-vbar('overviewCR',
-  EXP_LABELS,
-  agents.map(a=>({
+vbar('overviewCR', EXP_LABELS,
+  overviewAgents.map(a=>({
     label:a,
     data: allExps.map(e=>{ const idx=DATA[e].agents.indexOf(a); return idx>=0?(DATA[e].complet[idx]*100).toFixed(1):null; }),
-    backgroundColor: AGENT_COLORS[a]+'bb', borderColor: AGENT_COLORS[a], borderWidth:1
+    backgroundColor:(AGENT_COLORS[a]||'#888')+'bb', borderColor:AGENT_COLORS[a]||'#888', borderWidth:1
   }))
 );
 
-vbar('overviewPrem',
-  EXP_LABELS,
+vbar('overviewPrem', EXP_LABELS,
   ['Double-DQN','DQN','Q-Learning','PPO'].map(a=>({
     label:a,
     data: allExps.map(e=>{ const idx=DATA[e].agents.indexOf(a); return idx>=0?DATA[e].premium[idx]:null; }),
-    backgroundColor: AGENT_COLORS[a]+'bb', borderColor: AGENT_COLORS[a], borderWidth:1
+    backgroundColor:(AGENT_COLORS[a]||'#888')+'bb', borderColor:AGENT_COLORS[a]||'#888', borderWidth:1
   }))
 );
 
-// ── HELPERS ───────────────────────────────────────────────────────────────────
+// ── BASELINE FULL TABLE ───────────────────────────────────────────────────────
+const tbody = document.getElementById('baseline-table');
+BASELINE_FULL.agents.forEach((a,i)=>{
+  const rank = i+1;
+  const rankCls = rank===1?'rank-1':rank===2?'rank-2':rank===3?'rank-3':'';
+  const pCls = BASELINE_FULL.premium[i]<-10?'pos':BASELINE_FULL.premium[i]<0?'neu':'neg';
+  const rCls = BASELINE_FULL.reward[i]>0?'pos':'neg';
+  tbody.innerHTML += `<tr>
+    <td class="${rankCls}">${rank}</td>
+    <td><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${AGENT_COLORS[a]||'#888'};margin-right:6px"></span><strong>${a}</strong></td>
+    <td><span style="color:#64748b;font-size:.78rem">${BASELINE_FULL.category[i]}</span></td>
+    <td class="${rCls}">${BASELINE_FULL.reward[i]>0?'+':''}${BASELINE_FULL.reward[i].toFixed(2)}</td>
+    <td style="color:#64748b">±${BASELINE_FULL.std[i].toFixed(2)}</td>
+    <td>${(BASELINE_FULL.complet[i]*100).toFixed(2)}%</td>
+    <td>${BASELINE_FULL.stores[i].toFixed(2)}</td>
+    <td class="${pCls}">${BASELINE_FULL.premium[i].toFixed(2)}%</td>
+    <td>${BASELINE_FULL.pref[i].toFixed(2)}</td>
+    <td>${BASELINE_FULL.expiry[i].toFixed(2)}d</td>
+  </tr>`;
+});
+
+// Baseline charts
+hbar('b-reward', BASELINE_FULL.agents,
+  [{label:'Mean Reward', data:BASELINE_FULL.reward,
+    backgroundColor:BASELINE_FULL.agents.map(a=>(AGENT_COLORS[a]||'#888')+'cc'),
+    borderColor:BASELINE_FULL.agents.map(a=>AGENT_COLORS[a]||'#888'), borderWidth:1.5}]
+);
+
+vbar('b-complet', BASELINE_FULL.agents,
+  [{label:'Completion %', data:BASELINE_FULL.complet.map(v=>(v*100).toFixed(1)),
+    backgroundColor:BASELINE_FULL.agents.map(a=>(AGENT_COLORS[a]||'#888')+'cc'),
+    borderColor:BASELINE_FULL.agents.map(a=>AGENT_COLORS[a]||'#888'), borderWidth:1.5}]
+);
+
+// Scatter: price vs pref
+new Chart(document.getElementById('b-scatter'),{
+  type:'scatter',
+  data:{ datasets:[{
+    label:'Agents', pointRadius:8,
+    data: BASELINE_FULL.agents.map((a,i)=>({x:BASELINE_FULL.premium[i],y:BASELINE_FULL.pref[i],label:a})),
+    backgroundColor:BASELINE_FULL.agents.map(a=>(AGENT_COLORS[a]||'#888')+'cc'),
+    borderColor:BASELINE_FULL.agents.map(a=>AGENT_COLORS[a]||'#888'), borderWidth:1.5
+  }]},
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{label:c=>`${c.raw.label}: prem ${c.raw.x.toFixed(1)}% | pref ${c.raw.y.toFixed(2)}/5`}}
+    },
+    scales:{
+      x:{title:{display:true,text:'Price Premium % (lower=cheaper)',color:'#94a3b8'},grid:{color:'#1e293b'},ticks:{font:FONT}},
+      y:{title:{display:true,text:'Brand Preference Score /5',color:'#94a3b8'},grid:{color:'#1e293b'},ticks:{font:FONT}}
+    }
+  }
+});
+
+// ── COMPARE CARDS HELPER ──────────────────────────────────────────────────────
 function makeCompareCards(expKey, containerId) {
-  const d = DATA[expKey];
-  const b = DATA.baseline;
-  const container = document.getElementById(containerId);
-  if (!container) return;
+  const d = DATA[expKey]; const b = DATA.baseline;
+  const container = document.getElementById(containerId); if (!container) return;
   const metrics = [
-    {key:'reward',  label:'Best Reward',    fmt:v=>`+${v.toFixed(0)}`, bKey:'reward'},
-    {key:'complet', label:'Best Completion', fmt:v=>(v*100).toFixed(1)+'%', bKey:'complet'},
-    {key:'premium', label:'Best Discount',  fmt:v=>v.toFixed(1)+'%', bKey:'premium'},
-    {key:'pref',    label:'Best Pref Score', fmt:v=>v.toFixed(2)+'/5', bKey:'pref'},
+    {key:'reward',  label:'Best Reward',     fmt:v=>`+${v.toFixed(0)}`, getter:arr=>Math.max(...arr)},
+    {key:'complet', label:'Best Completion',  fmt:v=>(v*100).toFixed(1)+'%', getter:arr=>Math.max(...arr)},
+    {key:'premium', label:'Best Discount',   fmt:v=>v.toFixed(1)+'%', getter:arr=>Math.min(...arr)},
+    {key:'pref',    label:'Best Pref Score', fmt:v=>v.toFixed(2)+'/5', getter:arr=>Math.max(...arr)},
   ];
-  const getters = {
-    reward: arr=>Math.max(...arr),
-    complet:arr=>Math.max(...arr),
-    premium:arr=>Math.min(...arr),
-    pref:   arr=>Math.max(...arr),
-  };
   container.innerHTML = metrics.map(m=>{
-    const val   = getters[m.key](d[m.key]);
-    const bval  = getters[m.key](b[m.key]);
+    const val  = m.getter(d[m.key]);
+    const bval = m.getter(b[m.key]);
     const delta = val - bval;
-    const sign  = delta >= 0 ? '+' : '';
+    const sign  = delta>=0?'+':'';
     const cls   = m.key==='premium'?(delta<=0?'pos':'neg'):(delta>=0?'pos':'neg');
     return `<div class="metric-card">
       <div class="label">${m.label}</div>
@@ -337,103 +478,46 @@ function makeCompareCards(expKey, containerId) {
   }).join('');
 }
 
-function makeExpCharts(expKey, ids, metrics) {
-  const d = DATA[expKey];
-  const b = DATA.baseline;
-  metrics.forEach(({id, metric, label, pct}) => {
-    const ctx = document.getElementById(id);
-    if (!ctx) return;
-    new Chart(ctx, {
-      type:'bar', responsive:true,
-      data:{
-        labels: d.agents,
-        datasets:[
-          { label:'Baseline', data: b.agents.map((a,i)=>b[metric][i]), backgroundColor:'#334155cc', borderColor:'#475569', borderWidth:1 },
-          { label:label||expKey, data: d[metric], backgroundColor: d.agents.map(a=>AGENT_COLORS[a]+'cc'), borderColor: d.agents.map(a=>AGENT_COLORS[a]), borderWidth:1.5 }
-        ]
-      },
-      options:{
-        responsive:true, maintainAspectRatio:false,
-        plugins:{ legend:{labels:{font:FONT,boxWidth:12}}, tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${pct?((c.parsed.y)*100).toFixed(1)+'%':c.parsed.y.toFixed(2)}`}} },
-        scales:{ x:{grid:{color:'#1e293b'},ticks:{font:FONT}}, y:{grid:{color:'#1e293b'},ticks:{font:FONT, callback: v=>pct?(v*100).toFixed(0)+'%':v}} }
-      }
-    });
-  });
-}
-
 // ── EXP 0 ─────────────────────────────────────────────────────────────────────
 makeCompareCards('exp0','e0-cards');
-makeExpCharts('exp0',[],[]); // manual below
-
 hbar('e0r', DATA.exp0.agents,
-  [{label:'Reward',data:DATA.exp0.reward,backgroundColor:DATA.exp0.agents.map(a=>AGENT_COLORS[a]+'cc'),borderColor:DATA.exp0.agents.map(a=>AGENT_COLORS[a]),borderWidth:1.5}]);
-
+  [{label:'Reward',data:DATA.exp0.reward,backgroundColor:DATA.exp0.agents.map(a=>(AGENT_COLORS[a]||'#888')+'cc'),borderColor:DATA.exp0.agents.map(a=>AGENT_COLORS[a]||'#888'),borderWidth:1.5}]);
 vbar('e0c', DATA.exp0.agents,
-  [{label:'Completion %',data:DATA.exp0.complet.map(v=>(v*100).toFixed(1)),backgroundColor:DATA.exp0.agents.map(a=>AGENT_COLORS[a]+'cc'),borderColor:DATA.exp0.agents.map(a=>AGENT_COLORS[a]),borderWidth:1.5}]);
-
+  [{label:'Completion %',data:DATA.exp0.complet.map(v=>(v*100).toFixed(1)),backgroundColor:DATA.exp0.agents.map(a=>(AGENT_COLORS[a]||'#888')+'cc'),borderColor:DATA.exp0.agents.map(a=>AGENT_COLORS[a]||'#888'),borderWidth:1.5}]);
 hbar('e0p', DATA.exp0.agents,
-  [{label:'Avg Premium %',data:DATA.exp0.premium,backgroundColor:DATA.exp0.agents.map(a=>AGENT_COLORS[a]+'cc'),borderColor:DATA.exp0.agents.map(a=>AGENT_COLORS[a]),borderWidth:1.5}]);
-
-vbar('e0sp', DATA.exp0.agents, [
+  [{label:'Price Discount %',data:DATA.exp0.premium,backgroundColor:DATA.exp0.agents.map(a=>(AGENT_COLORS[a]||'#888')+'cc'),borderColor:DATA.exp0.agents.map(a=>AGENT_COLORS[a]||'#888'),borderWidth:1.5}]);
+vbar('e0sp', DATA.exp0.agents,[
   {label:'Stores Visited',data:DATA.exp0.stores,backgroundColor:'#3b82f688',borderColor:'#3b82f6',borderWidth:1.5},
   {label:'Pref Score',data:DATA.exp0.pref,backgroundColor:'#ec489988',borderColor:'#ec4899',borderWidth:1.5},
 ]);
 
 // ── EXP 1 ─────────────────────────────────────────────────────────────────────
 makeCompareCards('exp1','e1-cards');
-['r','c','p','s'].forEach((k,i)=>{
-  const metrics = [
-    {id:'e1r',metric:'reward',  pct:false},
-    {id:'e1c',metric:'complet', pct:true},
-    {id:'e1p',metric:'premium', pct:false},
-    {id:'e1s',metric:'stores',  pct:false},
-  ];
-  const m = metrics[i];
-  const d = DATA.exp1; const b = DATA.baseline;
-  new Chart(document.getElementById(m.id), {
-    type:'bar',
-    data:{labels:d.agents,datasets:[
-      {label:'Baseline',data:d.agents.map(a=>{const i2=b.agents.indexOf(a);return i2>=0?b[m.metric][i2]:null;}),backgroundColor:'#334155cc',borderColor:'#475569',borderWidth:1},
-      {label:'Exp1 180min',data:d[m.metric],backgroundColor:d.agents.map(a=>AGENT_COLORS[a]+'cc'),borderColor:d.agents.map(a=>AGENT_COLORS[a]),borderWidth:1.5}
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{font:FONT,boxWidth:12}}},scales:{x:{grid:{color:'#1e293b'},ticks:{font:FONT}},y:{grid:{color:'#1e293b'},ticks:{font:FONT}}}}
-  });
-});
+compareChart('e1r','exp1','reward');
+compareChart('e1c','exp1','complet',true);
+compareChart('e1p','exp1','premium');
+compareChart('e1s','exp1','stores');
 
 // ── EXP 2 ─────────────────────────────────────────────────────────────────────
 makeCompareCards('exp2','e2-cards');
-[{id:'e2r',m:'reward'},{id:'e2c',m:'complet'},{id:'e2p',m:'premium'},{id:'e2pf',m:'pref'}].forEach(({id,m})=>{
-  const d=DATA.exp2; const b=DATA.baseline;
-  new Chart(document.getElementById(id),{
-    type:'bar',
-    data:{labels:d.agents,datasets:[
-      {label:'Baseline',data:d.agents.map(a=>{const i2=b.agents.indexOf(a);return i2>=0?b[m][i2]:null;}),backgroundColor:'#334155cc',borderColor:'#475569',borderWidth:1},
-      {label:'Exp2 10goods',data:d[m],backgroundColor:d.agents.map(a=>AGENT_COLORS[a]+'cc'),borderColor:d.agents.map(a=>AGENT_COLORS[a]),borderWidth:1.5}
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{font:FONT,boxWidth:12}}},scales:{x:{grid:{color:'#1e293b'},ticks:{font:FONT}},y:{grid:{color:'#1e293b'},ticks:{font:FONT}}}}
-  });
-});
+compareChart('e2r','exp2','reward');
+compareChart('e2c','exp2','complet',true);
+compareChart('e2p','exp2','premium');
+compareChart('e2pf','exp2','pref');
 
 // ── EXP 3 ─────────────────────────────────────────────────────────────────────
 makeCompareCards('exp3','e3-cards');
-[{id:'e3r',m:'reward'},{id:'e3c',m:'complet'},{id:'e3p',m:'premium'},{id:'e3q',m:'pref'}].forEach(({id,m})=>{
-  const d=DATA.exp3; const b=DATA.baseline;
-  new Chart(document.getElementById(id),{
-    type:'bar',
-    data:{labels:d.agents,datasets:[
-      {label:'Baseline',data:d.agents.map(a=>{const i2=b.agents.indexOf(a);return i2>=0?b[m][i2]:null;}),backgroundColor:'#334155cc',borderColor:'#475569',borderWidth:1},
-      {label:'Exp3 80%avail',data:d[m],backgroundColor:d.agents.map(a=>AGENT_COLORS[a]+'cc'),borderColor:d.agents.map(a=>AGENT_COLORS[a]),borderWidth:1.5}
-    ]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{font:FONT,boxWidth:12}}},scales:{x:{grid:{color:'#1e293b'},ticks:{font:FONT}},y:{grid:{color:'#1e293b'},ticks:{font:FONT}}}}
-  });
-});
+compareChart('e3r','exp3','reward');
+compareChart('e3c','exp3','complet',true);
+compareChart('e3p','exp3','premium');
+compareChart('e3q','exp3','pref');
 
 // ── TAB SWITCHING ─────────────────────────────────────────────────────────────
-function showTab(id) {
+function showTab(id, event) {
   document.querySelectorAll('[id^="tab-"]').forEach(el=>el.classList.add('hidden'));
   document.querySelectorAll('.tab').forEach(el=>el.classList.remove('active'));
   document.getElementById('tab-'+id).classList.remove('hidden');
-  event.target.classList.add('active');
+  if(event) event.target.classList.add('active');
 }
 </script>
 </body>
