@@ -1,0 +1,145 @@
+{
+  "Dueling-DQN": {
+    "reward": 498.66,
+    "std": 52.1,
+    "completion": 98.28,
+    "stores": 2.55,
+    "premium": -17.1,
+    "pref": 3.43,
+    "expiry": 3.51,
+    "type": "RL",
+    "episodes": 2000
+  },
+  "Double-DQN": {
+    "reward": 475.4,
+    "std": 58.2,
+    "completion": 97.08,
+    "stores": 2.71,
+    "premium": -15.8,
+    "pref": 3.39,
+    "expiry": 3.48,
+    "type": "RL",
+    "episodes": 2000
+  },
+  "DQN": {
+    "reward": 472.93,
+    "std": 55.87,
+    "completion": 98.66,
+    "stores": 2.47,
+    "premium": -16.2,
+    "pref": 3.41,
+    "expiry": 3.5,
+    "type": "RL",
+    "episodes": 10000
+  },
+  "SARSA-200k": {
+    "reward": 375.77,
+    "std": 95.12,
+    "completion": 95.88,
+    "stores": 4.8,
+    "premium": -8.74,
+    "pref": 3.31,
+    "expiry": 3.41,
+    "type": "Tabular",
+    "episodes": 200000
+  },
+  "Expected-SARSA": {
+    "reward": 369.69,
+    "std": 127.5,
+    "completion": 94.37,
+    "stores": 3.08,
+    "premium": -12.81,
+    "pref": 3.17,
+    "expiry": 3.5,
+    "type": "Tabular",
+    "episodes": 100000
+  },
+  "Q-Learn-200k": {
+    "reward": 355.0,
+    "std": 102.0,
+    "completion": 91.5,
+    "stores": 4.5,
+    "premium": -8.9,
+    "pref": 3.35,
+    "expiry": 3.44,
+    "type": "Tabular",
+    "episodes": 200000
+  },
+  "Best-Deal": {
+    "reward": 338.47,
+    "std": 71.2,
+    "completion": 99.89,
+    "stores": 5.5,
+    "premium": -0.95,
+    "pref": 3.25,
+    "expiry": 3.42,
+    "type": "Heuristic",
+    "episodes": 0
+  },
+  "Greedy": {
+    "reward": 301.64,
+    "std": 58.35,
+    "completion": 100.0,
+    "stores": 6.0,
+    "premium": -6.93,
+    "pref": 3.45,
+    "expiry": 3.5,
+    "type": "Heuristic",
+    "episodes": 0
+  },
+  "Time-Aware": {
+    "reward": 254.37,
+    "std": 80.1,
+    "completion": 99.97,
+    "stores": 5.6,
+    "premium": -3.2,
+    "pref": 4.49,
+    "expiry": 3.48,
+    "type": "Heuristic",
+    "episodes": 0
+  },
+  "PPO": {
+    "reward": 184.17,
+    "std": 65.4,
+    "completion": 99.62,
+    "stores": 5.21,
+    "premium": -2.1,
+    "pref": 3.48,
+    "expiry": 3.49,
+    "type": "RL",
+    "episodes": 3000
+  },
+  "Freshness-1st": {
+    "reward": 152.59,
+    "std": 79.3,
+    "completion": 100.0,
+    "stores": 5.2,
+    "premium": -1.8,
+    "pref": 3.51,
+    "expiry": 3.55,
+    "type": "Heuristic",
+    "episodes": 0
+  },
+  "Prof-Heuristic": {
+    "reward": 148.69,
+    "std": 87.0,
+    "completion": 94.92,
+    "stores": 5.35,
+    "premium": -0.95,
+    "pref": 4.17,
+    "expiry": 1.51,
+    "type": "Heuristic",
+    "episodes": 0
+  },
+  "Random": {
+    "reward": -50.88,
+    "std": 174.09,
+    "completion": 62.76,
+    "stores": 3.41,
+    "premium": -0.45,
+    "pref": 3.02,
+    "expiry": 3.4,
+    "type": "Baseline",
+    "episodes": 0
+  }
+}
