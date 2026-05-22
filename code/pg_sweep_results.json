@@ -1,0 +1,224 @@
+{
+  "PPO": {
+    "500": {
+      "reward": 127.5226,
+      "reward_std": 74.5668,
+      "cr": 0.9575,
+      "cr_std": 0.0452,
+      "stores": 3.39,
+      "time_used": 105.125,
+      "premium": -1.0997,
+      "pref": 2.9134,
+      "expiry": 3.4737,
+      "train_episodes": 500
+    },
+    "1000": {
+      "reward": 162.3196,
+      "reward_std": 71.076,
+      "cr": 0.967,
+      "cr_std": 0.0408,
+      "stores": 3.53,
+      "time_used": 105.0,
+      "premium": -2.4526,
+      "pref": 2.9734,
+      "expiry": 3.5001,
+      "train_episodes": 1000
+    },
+    "1500": {
+      "reward": 179.827,
+      "reward_std": 73.766,
+      "cr": 0.9667,
+      "cr_std": 0.0431,
+      "stores": 3.275,
+      "time_used": 105.125,
+      "premium": -3.4886,
+      "pref": 2.9616,
+      "expiry": 3.4827,
+      "train_episodes": 1500
+    },
+    "3000": {
+      "reward": 238.7718,
+      "reward_std": 66.7336,
+      "cr": 0.9662,
+      "cr_std": 0.0487,
+      "stores": 3.1,
+      "time_used": 105.1,
+      "premium": -6.3346,
+      "pref": 3.1054,
+      "expiry": 3.473,
+      "train_episodes": 3000
+    },
+    "5000": {
+      "reward": 330.6244,
+      "reward_std": 63.8377,
+      "cr": 0.9822,
+      "cr_std": 0.032,
+      "stores": 3.06,
+      "time_used": 105.075,
+      "premium": -10.2849,
+      "pref": 3.1892,
+      "expiry": 3.4836,
+      "train_episodes": 5000
+    },
+    "10000": {
+      "reward": 373.8701,
+      "reward_std": 61.6813,
+      "cr": 0.98,
+      "cr_std": 0.0274,
+      "stores": 3.005,
+      "time_used": 105.0,
+      "premium": -12.3182,
+      "pref": 3.3341,
+      "expiry": 3.4332,
+      "train_episodes": 10000
+    }
+  },
+  "REINFORCE": {
+    "500": {
+      "reward": 249.8137,
+      "reward_std": 52.5714,
+      "cr": 0.9615,
+      "cr_std": 0.0399,
+      "stores": 2.0,
+      "time_used": 105.0,
+      "premium": -8.1518,
+      "pref": 2.7503,
+      "expiry": 3.4232,
+      "train_episodes": 500
+    },
+    "1000": {
+      "reward": 275.8428,
+      "reward_std": 60.5489,
+      "cr": 0.982,
+      "cr_std": 0.0279,
+      "stores": 3.0,
+      "time_used": 105.0,
+      "premium": -8.3977,
+      "pref": 2.7602,
+      "expiry": 3.4386,
+      "train_episodes": 1000
+    },
+    "1500": {
+      "reward": 326.5219,
+      "reward_std": 58.6221,
+      "cr": 0.991,
+      "cr_std": 0.0205,
+      "stores": 3.0,
+      "time_used": 105.0,
+      "premium": -10.0635,
+      "pref": 3.0557,
+      "expiry": 3.4007,
+      "train_episodes": 1500
+    },
+    "3000": {
+      "reward": 317.3095,
+      "reward_std": 57.5532,
+      "cr": 0.9885,
+      "cr_std": 0.0238,
+      "stores": 3.0,
+      "time_used": 105.0,
+      "premium": -9.5409,
+      "pref": 3.1099,
+      "expiry": 3.4872,
+      "train_episodes": 3000
+    },
+    "5000": {
+      "reward": 324.9631,
+      "reward_std": 60.1169,
+      "cr": 0.9822,
+      "cr_std": 0.0282,
+      "stores": 3.0,
+      "time_used": 105.0,
+      "premium": -9.7499,
+      "pref": 3.3225,
+      "expiry": 3.4686,
+      "train_episodes": 5000
+    },
+    "10000": {
+      "reward": 332.6391,
+      "reward_std": 64.4367,
+      "cr": 0.9797,
+      "cr_std": 0.0288,
+      "stores": 3.0,
+      "time_used": 105.0,
+      "premium": -10.6366,
+      "pref": 3.1181,
+      "expiry": 3.4978,
+      "train_episodes": 10000
+    }
+  },
+  "A2C": {
+    "500": {
+      "reward": 118.9901,
+      "reward_std": 59.1528,
+      "cr": 0.9407,
+      "cr_std": 0.0517,
+      "stores": 1.0,
+      "time_used": 15.0,
+      "premium": -0.8662,
+      "pref": 2.4785,
+      "expiry": 3.5182,
+      "train_episodes": 500
+    },
+    "1000": {
+      "reward": 121.1817,
+      "reward_std": 55.5924,
+      "cr": 0.9955,
+      "cr_std": 0.0143,
+      "stores": 2.0,
+      "time_used": 105.0,
+      "premium": -0.7826,
+      "pref": 2.571,
+      "expiry": 3.5199,
+      "train_episodes": 1000
+    },
+    "1500": {
+      "reward": 113.1191,
+      "reward_std": 60.2889,
+      "cr": 0.9407,
+      "cr_std": 0.0517,
+      "stores": 1.0,
+      "time_used": 15.0,
+      "premium": 0.1117,
+      "pref": 2.8002,
+      "expiry": 3.5612,
+      "train_episodes": 1500
+    },
+    "3000": {
+      "reward": 135.9165,
+      "reward_std": 53.7468,
+      "cr": 0.9407,
+      "cr_std": 0.0517,
+      "stores": 1.0,
+      "time_used": 15.0,
+      "premium": -1.4035,
+      "pref": 2.6669,
+      "expiry": 3.5132,
+      "train_episodes": 3000
+    },
+    "5000": {
+      "reward": 101.3768,
+      "reward_std": 57.0731,
+      "cr": 0.9407,
+      "cr_std": 0.0517,
+      "stores": 1.0,
+      "time_used": 15.0,
+      "premium": 0.7588,
+      "pref": 2.8229,
+      "expiry": 3.5325,
+      "train_episodes": 5000
+    },
+    "10000": {
+      "reward": 153.8182,
+      "reward_std": 53.5178,
+      "cr": 0.9997,
+      "cr_std": 0.0035,
+      "stores": 3.0,
+      "time_used": 105.0,
+      "premium": -1.6156,
+      "pref": 2.761,
+      "expiry": 3.5231,
+      "train_episodes": 10000
+    }
+  }
+}

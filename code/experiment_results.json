@@ -1,0 +1,6162 @@
+{
+  "baseline": {
+    "Q-Learning": {
+      "mean_reward": 110.0452,
+      "std_reward": 163.2667,
+      "ci95_reward": 10.1194,
+      "mean_cr": 0.7489,
+      "std_cr": 0.2432,
+      "ci95_cr": 0.0151,
+      "mean_stores": 1.425,
+      "ci95_stores": 0.0346,
+      "mean_time": 23.55,
+      "mean_premium": -6.2635,
+      "mean_pref": 3.1826,
+      "mean_expiry": 3.5216,
+      "success_rate": 0.314,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.189,
+          0.052,
+          0.085,
+          0.045,
+          0.054
+        ],
+        "second_store_freq": [
+          0.0,
+          0.18,
+          0.04,
+          0.085,
+          0.032,
+          0.054
+        ],
+        "dominant_store": 1,
+        "avg_route_length": 1.44,
+        "top_5_routes": [
+          [
+            [
+              0
+            ],
+            609
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            164
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            70
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            49
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            36
+          ]
+        ]
+      }
+    },
+    "SARSA": {
+      "mean_reward": 76.0399,
+      "std_reward": 193.7954,
+      "ci95_reward": 12.0116,
+      "mean_cr": 0.644,
+      "std_cr": 0.2636,
+      "ci95_cr": 0.0163,
+      "mean_stores": 1.273,
+      "ci95_stores": 0.031,
+      "mean_time": 20.475,
+      "mean_premium": -9.2085,
+      "mean_pref": 3.1422,
+      "mean_expiry": 3.5081,
+      "success_rate": 0.215,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.076,
+          0.065,
+          0.081,
+          0.045,
+          0.006
+        ],
+        "second_store_freq": [
+          0.0,
+          0.076,
+          0.056,
+          0.072,
+          0.037,
+          0.006
+        ],
+        "dominant_store": 3,
+        "avg_route_length": 1.28,
+        "top_5_routes": [
+          [
+            [
+              0
+            ],
+            753
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            68
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            67
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            42
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            35
+          ]
+        ]
+      }
+    },
+    "ExpSARSA": {
+      "mean_reward": 176.3476,
+      "std_reward": 206.9343,
+      "ci95_reward": 12.8259,
+      "mean_cr": 0.7231,
+      "std_cr": 0.2521,
+      "ci95_cr": 0.0156,
+      "mean_stores": 1.35,
+      "ci95_stores": 0.0325,
+      "mean_time": 22.09,
+      "mean_premium": -12.149,
+      "mean_pref": 3.0417,
+      "mean_expiry": 3.5019,
+      "success_rate": 0.323,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.069,
+          0.073,
+          0.096,
+          0.035,
+          0.077
+        ],
+        "second_store_freq": [
+          0.0,
+          0.06,
+          0.072,
+          0.096,
+          0.021,
+          0.077
+        ],
+        "dominant_store": 3,
+        "avg_route_length": 1.37,
+        "top_5_routes": [
+          [
+            [
+              0
+            ],
+            674
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            81
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            69
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            65
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            57
+          ]
+        ]
+      }
+    },
+    "DQN": {
+      "mean_reward": 336.034,
+      "std_reward": 101.0236,
+      "ci95_reward": 6.2615,
+      "mean_cr": 0.9445,
+      "std_cr": 0.0994,
+      "ci95_cr": 0.0062,
+      "mean_stores": 3.174,
+      "ci95_stores": 0.0551,
+      "mean_time": 106.555,
+      "mean_premium": -11.4483,
+      "mean_pref": 3.571,
+      "mean_expiry": 3.5003,
+      "success_rate": 0.455,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.321,
+          0.343,
+          0.032,
+          0.515,
+          0.963
+        ],
+        "second_store_freq": [
+          0.0,
+          0.008,
+          0.109,
+          0.0,
+          0.018,
+          0.865
+        ],
+        "dominant_store": 5,
+        "avg_route_length": 12.79,
+        "top_5_routes": [
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5
+            ],
+            225
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              4,
+              0,
+              4,
+              0,
+              4,
+              0,
+              4,
+              0,
+              4,
+              0
+            ],
+            45
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              2,
+              5,
+              2,
+              5,
+              2,
+              5,
+              2,
+              5,
+              2,
+              5
+            ],
+            35
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              4,
+              0,
+              1,
+              0,
+              4,
+              0,
+              4
+            ],
+            31
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              4,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5
+            ],
+            28
+          ]
+        ]
+      }
+    },
+    "DoubleDQN": {
+      "mean_reward": 498.7915,
+      "std_reward": 97.6385,
+      "ci95_reward": 6.0517,
+      "mean_cr": 0.9677,
+      "std_cr": 0.0422,
+      "ci95_cr": 0.0026,
+      "mean_stores": 3.347,
+      "ci95_stores": 0.0426,
+      "mean_time": 96.335,
+      "mean_premium": -19.1942,
+      "mean_pref": 3.1888,
+      "mean_expiry": 3.5316,
+      "success_rate": 0.538,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.785,
+          0.001,
+          0.999,
+          0.041,
+          0.521
+        ],
+        "second_store_freq": [
+          0.0,
+          0.002,
+          0.0,
+          0.48,
+          0.0,
+          0.518
+        ],
+        "dominant_store": 3,
+        "avg_route_length": 10.23,
+        "top_5_routes": [
+          [
+            [
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3
+            ],
+            121
+          ],
+          [
+            [
+              0,
+              5,
+              3,
+              0,
+              1
+            ],
+            109
+          ],
+          [
+            [
+              0,
+              5,
+              3,
+              1
+            ],
+            101
+          ],
+          [
+            [
+              0,
+              3,
+              1,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0
+            ],
+            73
+          ],
+          [
+            [
+              0,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1
+            ],
+            61
+          ]
+        ]
+      }
+    },
+    "DuelingDQN": {
+      "mean_reward": 382.0875,
+      "std_reward": 54.5714,
+      "ci95_reward": 3.3824,
+      "mean_cr": 0.9978,
+      "std_cr": 0.011,
+      "ci95_cr": 0.0007,
+      "mean_stores": 4.0,
+      "ci95_stores": 0.0,
+      "mean_time": 105.0,
+      "mean_premium": -12.5077,
+      "mean_pref": 2.9187,
+      "mean_expiry": 3.4985,
+      "success_rate": 0.959,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "second_store_freq": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dominant_store": 1,
+        "avg_route_length": 10.0,
+        "top_5_routes": [
+          [
+            [
+              0,
+              2,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1
+            ],
+            789
+          ],
+          [
+            [
+              0,
+              2,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3
+            ],
+            210
+          ],
+          [
+            [
+              0,
+              2,
+              1,
+              2,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1
+            ],
+            1
+          ]
+        ]
+      }
+    },
+    "PPO": {
+      "mean_reward": 119.6531,
+      "std_reward": 68.4857,
+      "ci95_reward": 4.2448,
+      "mean_cr": 0.951,
+      "std_cr": 0.0477,
+      "ci95_cr": 0.003,
+      "mean_stores": 3.015,
+      "ci95_stores": 0.0075,
+      "mean_time": 105.0,
+      "mean_premium": -0.4576,
+      "mean_pref": 3.1827,
+      "mean_expiry": 3.5119,
+      "success_rate": 0.362,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.0,
+          0.018,
+          1.0,
+          0.0,
+          0.997
+        ],
+        "second_store_freq": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "dominant_store": 3,
+        "avg_route_length": 12.96,
+        "top_5_routes": [
+          [
+            [
+              0,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5
+            ],
+            982
+          ],
+          [
+            [
+              0,
+              3,
+              2,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5,
+              3
+            ],
+            8
+          ],
+          [
+            [
+              0,
+              3,
+              5,
+              3,
+              2,
+              3,
+              5,
+              3,
+              5,
+              3
+            ],
+            5
+          ],
+          [
+            [
+              0,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2
+            ],
+            3
+          ],
+          [
+            [
+              0,
+              3,
+              5,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            1
+          ]
+        ]
+      }
+    },
+    "REINFORCE": {
+      "mean_reward": 258.4642,
+      "std_reward": 67.8094,
+      "ci95_reward": 4.2029,
+      "mean_cr": 0.9474,
+      "std_cr": 0.0506,
+      "ci95_cr": 0.0031,
+      "mean_stores": 2.322,
+      "ci95_stores": 0.0291,
+      "mean_time": 105.1,
+      "mean_premium": -8.3499,
+      "mean_pref": 3.0771,
+      "mean_expiry": 3.4907,
+      "success_rate": 0.351,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.31,
+          0.0,
+          0.012,
+          0.0,
+          1.0
+        ],
+        "second_store_freq": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "dominant_store": 5,
+        "avg_route_length": 15.05,
+        "top_5_routes": [
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5
+            ],
+            679
+          ],
+          [
+            [
+              0,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1
+            ],
+            270
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1
+            ],
+            13
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              1
+            ],
+            8
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              1
+            ],
+            7
+          ]
+        ]
+      }
+    },
+    "A2C": {
+      "mean_reward": 166.8234,
+      "std_reward": 69.035,
+      "ci95_reward": 4.2788,
+      "mean_cr": 0.9964,
+      "std_cr": 0.0133,
+      "ci95_cr": 0.0008,
+      "mean_stores": 2.0,
+      "ci95_stores": 0.0,
+      "mean_time": 105.0,
+      "mean_premium": -2.5423,
+      "mean_pref": 2.8293,
+      "mean_expiry": 3.4995,
+      "success_rate": 0.93,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_store_freq": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dominant_store": 1,
+        "avg_route_length": 16.0,
+        "top_5_routes": [
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            1000
+          ]
+        ]
+      }
+    },
+    "ValueIter": {
+      "mean_reward": 138.2965,
+      "std_reward": 65.1985,
+      "ci95_reward": 4.041,
+      "mean_cr": 0.9958,
+      "std_cr": 0.0145,
+      "ci95_cr": 0.0009,
+      "mean_stores": 1.762,
+      "ci95_stores": 0.0264,
+      "mean_time": 35.98,
+      "mean_premium": 2.2008,
+      "mean_pref": 3.7764,
+      "mean_expiry": 3.7396,
+      "success_rate": 0.918,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.762,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_store_freq": [
+          0.0,
+          0.762,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dominant_store": 1,
+        "avg_route_length": 2.91,
+        "top_5_routes": [
+          [
+            [
+              0,
+              1
+            ],
+            680
+          ],
+          [
+            [
+              0
+            ],
+            238
+          ],
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            82
+          ]
+        ]
+      }
+    },
+    "Greedy": {
+      "mean_reward": 80.4151,
+      "std_reward": 99.2013,
+      "ci95_reward": 6.1486,
+      "mean_cr": 0.8962,
+      "std_cr": 0.1126,
+      "ci95_cr": 0.007,
+      "mean_stores": 4.415,
+      "ci95_stores": 0.0919,
+      "mean_time": 109.15,
+      "mean_premium": 1.4595,
+      "mean_pref": 4.2427,
+      "mean_expiry": 1.5073,
+      "success_rate": 0.331,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.915,
+          0.644,
+          0.54,
+          0.635,
+          0.681
+        ],
+        "second_store_freq": [
+          0.0,
+          0.581,
+          0.065,
+          0.013,
+          0.152,
+          0.189
+        ],
+        "dominant_store": 1,
+        "avg_route_length": 9.59,
+        "top_5_routes": [
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            118
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            26
+          ],
+          [
+            [
+              0,
+              1,
+              5,
+              2,
+              3,
+              4
+            ],
+            26
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5
+            ],
+            20
+          ],
+          [
+            [
+              0,
+              5,
+              1,
+              2,
+              3,
+              4
+            ],
+            16
+          ]
+        ]
+      }
+    },
+    "TimeAware": {
+      "mean_reward": 209.0206,
+      "std_reward": 68.7746,
+      "ci95_reward": 4.2627,
+      "mean_cr": 0.9926,
+      "std_cr": 0.0444,
+      "ci95_cr": 0.0028,
+      "mean_stores": 5.874,
+      "ci95_stores": 0.0374,
+      "mean_time": 112.855,
+      "mean_premium": 0.1404,
+      "mean_pref": 4.4527,
+      "mean_expiry": 4.8319,
+      "success_rate": 0.954,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.965,
+          1.0,
+          0.98,
+          0.978,
+          0.951
+        ],
+        "second_store_freq": [
+          0.0,
+          0.007,
+          0.992,
+          0.0,
+          0.001,
+          0.0
+        ],
+        "dominant_store": 2,
+        "avg_route_length": 5.95,
+        "top_5_routes": [
+          [
+            [
+              0,
+              2,
+              1,
+              3,
+              4,
+              5
+            ],
+            149
+          ],
+          [
+            [
+              0,
+              2,
+              3,
+              1,
+              4,
+              5
+            ],
+            139
+          ],
+          [
+            [
+              0,
+              2,
+              4,
+              1,
+              3,
+              5
+            ],
+            123
+          ],
+          [
+            [
+              0,
+              2,
+              3,
+              4,
+              1,
+              5
+            ],
+            79
+          ],
+          [
+            [
+              0,
+              2,
+              5,
+              1,
+              3,
+              4
+            ],
+            65
+          ]
+        ]
+      }
+    },
+    "Freshness": {
+      "mean_reward": 81.951,
+      "std_reward": 64.5285,
+      "ci95_reward": 3.9995,
+      "mean_cr": 1.0,
+      "std_cr": 0.0,
+      "ci95_cr": 0.0,
+      "mean_stores": 6.0,
+      "ci95_stores": 0.0,
+      "mean_time": 115.0,
+      "mean_premium": 3.7757,
+      "mean_pref": 3.4909,
+      "mean_expiry": 2.7831,
+      "success_rate": 1.0,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "second_store_freq": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "dominant_store": 1,
+        "avg_route_length": 6.0,
+        "top_5_routes": [
+          [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            1000
+          ]
+        ]
+      }
+    },
+    "BrandQuality": {
+      "mean_reward": 6.7447,
+      "std_reward": 105.7916,
+      "ci95_reward": 6.557,
+      "mean_cr": 0.8002,
+      "std_cr": 0.1436,
+      "ci95_cr": 0.0089,
+      "mean_stores": 3.735,
+      "ci95_stores": 0.0763,
+      "mean_time": 106.325,
+      "mean_premium": 3.3794,
+      "mean_pref": 4.6377,
+      "mean_expiry": 1.533,
+      "success_rate": 0.088,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.984,
+          0.38,
+          0.352,
+          0.644,
+          0.375
+        ],
+        "second_store_freq": [
+          0.0,
+          0.943,
+          0.007,
+          0.002,
+          0.034,
+          0.014
+        ],
+        "dominant_store": 1,
+        "avg_route_length": 11.06,
+        "top_5_routes": [
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            154
+          ],
+          [
+            [
+              0,
+              1,
+              4,
+              1,
+              4,
+              1,
+              4,
+              1,
+              4,
+              1,
+              4,
+              1,
+              4
+            ],
+            80
+          ],
+          [
+            [
+              0,
+              1,
+              4,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            58
+          ],
+          [
+            [
+              0,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3
+            ],
+            22
+          ],
+          [
+            [
+              0,
+              1,
+              4,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            19
+          ]
+        ]
+      }
+    },
+    "Random": {
+      "mean_reward": -33.9033,
+      "std_reward": 180.4952,
+      "ci95_reward": 11.1872,
+      "mean_cr": 0.6286,
+      "std_cr": 0.301,
+      "ci95_cr": 0.0187,
+      "mean_stores": 3.383,
+      "ci95_stores": 0.0953,
+      "mean_time": 68.42,
+      "mean_premium": -2.0087,
+      "mean_pref": 2.9619,
+      "mean_expiry": 3.4681,
+      "success_rate": 0.126,
+      "route_info": {
+        "visit_freq": [
+          1.0,
+          0.491,
+          0.471,
+          0.498,
+          0.461,
+          0.462
+        ],
+        "second_store_freq": [
+          0.0,
+          0.164,
+          0.147,
+          0.175,
+          0.179,
+          0.164
+        ],
+        "dominant_store": 3,
+        "avg_route_length": 4.54,
+        "top_5_routes": [
+          [
+            [
+              0
+            ],
+            171
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            31
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            24
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            23
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            22
+          ]
+        ]
+      }
+    }
+  },
+  "significance_table": {
+    "Q-Learning vs SARSA": {
+      "t_stat": 4.2415,
+      "p_value": 2.3e-05,
+      "significant": true,
+      "better": "Q-Learning",
+      "cohens_d": 0.1898
+    },
+    "Q-Learning vs ExpSARSA": {
+      "t_stat": -7.9504,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ExpSARSA",
+      "cohens_d": 0.3557
+    },
+    "Q-Learning vs DQN": {
+      "t_stat": -37.2033,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 1.6646
+    },
+    "Q-Learning vs DoubleDQN": {
+      "t_stat": -64.5891,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 2.89
+    },
+    "Q-Learning vs DuelingDQN": {
+      "t_stat": -49.9486,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 2.2349
+    },
+    "Q-Learning vs PPO": {
+      "t_stat": -1.7152,
+      "p_value": 0.086535,
+      "significant": false,
+      "better": "PPO",
+      "cohens_d": 0.0767
+    },
+    "Q-Learning vs REINFORCE": {
+      "t_stat": -26.535,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 1.1873
+    },
+    "Q-Learning vs A2C": {
+      "t_stat": -10.1239,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "A2C",
+      "cohens_d": 0.453
+    },
+    "Q-Learning vs ValueIter": {
+      "t_stat": -5.0792,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ValueIter",
+      "cohens_d": 0.2273
+    },
+    "Q-Learning vs Greedy": {
+      "t_stat": 4.9022,
+      "p_value": 1e-06,
+      "significant": true,
+      "better": "Q-Learning",
+      "cohens_d": 0.2193
+    },
+    "Q-Learning vs TimeAware": {
+      "t_stat": -17.658,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 0.7901
+    },
+    "Q-Learning vs Freshness": {
+      "t_stat": 5.058,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "Q-Learning",
+      "cohens_d": 0.2263
+    },
+    "Q-Learning vs BrandQuality": {
+      "t_stat": 16.7828,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "Q-Learning",
+      "cohens_d": 0.7509
+    },
+    "Q-Learning vs Random": {
+      "t_stat": 18.694,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "Q-Learning",
+      "cohens_d": 0.8364
+    },
+    "SARSA vs ExpSARSA": {
+      "t_stat": -11.1827,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ExpSARSA",
+      "cohens_d": 0.5004
+    },
+    "SARSA vs DQN": {
+      "t_stat": -37.6013,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 1.6824
+    },
+    "SARSA vs DoubleDQN": {
+      "t_stat": -61.575,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 2.7551
+    },
+    "SARSA vs DuelingDQN": {
+      "t_stat": -48.0461,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 2.1498
+    },
+    "SARSA vs PPO": {
+      "t_stat": -6.7066,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "PPO",
+      "cohens_d": 0.3001
+    },
+    "SARSA vs REINFORCE": {
+      "t_stat": -28.0829,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 1.2565
+    },
+    "SARSA vs A2C": {
+      "t_stat": -13.9478,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "A2C",
+      "cohens_d": 0.6241
+    },
+    "SARSA vs ValueIter": {
+      "t_stat": -9.6237,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ValueIter",
+      "cohens_d": 0.4306
+    },
+    "SARSA vs Greedy": {
+      "t_stat": -0.6352,
+      "p_value": 0.525405,
+      "significant": false,
+      "better": "Greedy",
+      "cohens_d": 0.0284
+    },
+    "SARSA vs TimeAware": {
+      "t_stat": -20.4395,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 0.9145
+    },
+    "SARSA vs Freshness": {
+      "t_stat": -0.9147,
+      "p_value": 0.360532,
+      "significant": false,
+      "better": "Freshness",
+      "cohens_d": 0.0409
+    },
+    "SARSA vs BrandQuality": {
+      "t_stat": 9.9198,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "SARSA",
+      "cohens_d": 0.4439
+    },
+    "SARSA vs Random": {
+      "t_stat": 13.1215,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "SARSA",
+      "cohens_d": 0.5871
+    },
+    "ExpSARSA vs DQN": {
+      "t_stat": -21.9179,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 0.9807
+    },
+    "ExpSARSA vs DoubleDQN": {
+      "t_stat": -44.5407,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 1.9929
+    },
+    "ExpSARSA vs DuelingDQN": {
+      "t_stat": -30.3857,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 1.3596
+    },
+    "ExpSARSA vs PPO": {
+      "t_stat": 8.2209,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ExpSARSA",
+      "cohens_d": 0.3678
+    },
+    "ExpSARSA vs REINFORCE": {
+      "t_stat": -11.9188,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 0.5333
+    },
+    "ExpSARSA vs A2C": {
+      "t_stat": 1.38,
+      "p_value": 0.167853,
+      "significant": false,
+      "better": "ExpSARSA",
+      "cohens_d": 0.0617
+    },
+    "ExpSARSA vs ValueIter": {
+      "t_stat": 5.5433,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ExpSARSA",
+      "cohens_d": 0.248
+    },
+    "ExpSARSA vs Greedy": {
+      "t_stat": 13.2129,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ExpSARSA",
+      "cohens_d": 0.5912
+    },
+    "ExpSARSA vs TimeAware": {
+      "t_stat": -4.7357,
+      "p_value": 2e-06,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 0.2119
+    },
+    "ExpSARSA vs Freshness": {
+      "t_stat": 13.7644,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ExpSARSA",
+      "cohens_d": 0.6159
+    },
+    "ExpSARSA vs BrandQuality": {
+      "t_stat": 23.0656,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ExpSARSA",
+      "cohens_d": 1.032
+    },
+    "ExpSARSA vs Random": {
+      "t_stat": 24.201,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ExpSARSA",
+      "cohens_d": 1.0828
+    },
+    "DQN vs DoubleDQN": {
+      "t_stat": -36.6151,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 1.6383
+    },
+    "DQN vs DuelingDQN": {
+      "t_stat": -12.6772,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 0.5672
+    },
+    "DQN vs PPO": {
+      "t_stat": 56.0358,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 2.5073
+    },
+    "DQN vs REINFORCE": {
+      "t_stat": 20.1506,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 0.9016
+    },
+    "DQN vs A2C": {
+      "t_stat": 43.7095,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 1.9557
+    },
+    "DQN vs ValueIter": {
+      "t_stat": 51.9803,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 2.3258
+    },
+    "DQN vs Greedy": {
+      "t_stat": 57.063,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 2.5532
+    },
+    "DQN vs TimeAware": {
+      "t_stat": 32.8488,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 1.4698
+    },
+    "DQN vs Freshness": {
+      "t_stat": 66.9938,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 2.9976
+    },
+    "DQN vs BrandQuality": {
+      "t_stat": 71.1504,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 3.1835
+    },
+    "DQN vs Random": {
+      "t_stat": 56.5287,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DQN",
+      "cohens_d": 2.5293
+    },
+    "DoubleDQN vs DuelingDQN": {
+      "t_stat": 32.9775,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 1.4755
+    },
+    "DoubleDQN vs PPO": {
+      "t_stat": 100.4792,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 4.4958
+    },
+    "DoubleDQN vs REINFORCE": {
+      "t_stat": 63.8989,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 2.8591
+    },
+    "DoubleDQN vs A2C": {
+      "t_stat": 87.7455,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 3.9261
+    },
+    "DoubleDQN vs ValueIter": {
+      "t_stat": 97.0494,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 4.3424
+    },
+    "DoubleDQN vs Greedy": {
+      "t_stat": 95.0033,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 4.2508
+    },
+    "DoubleDQN vs TimeAware": {
+      "t_stat": 76.6882,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 3.4313
+    },
+    "DoubleDQN vs Freshness": {
+      "t_stat": 112.5737,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 5.037
+    },
+    "DoubleDQN vs BrandQuality": {
+      "t_stat": 108.029,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 4.8336
+    },
+    "DoubleDQN vs Random": {
+      "t_stat": 82.0464,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DoubleDQN",
+      "cohens_d": 3.6711
+    },
+    "DuelingDQN vs PPO": {
+      "t_stat": 94.7225,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 4.2382
+    },
+    "DuelingDQN vs REINFORCE": {
+      "t_stat": 44.891,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 2.0086
+    },
+    "DuelingDQN vs A2C": {
+      "t_stat": 77.3171,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 3.4595
+    },
+    "DuelingDQN vs ValueIter": {
+      "t_stat": 90.6286,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 4.0551
+    },
+    "DuelingDQN vs Greedy": {
+      "t_stat": 84.2156,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 3.7681
+    },
+    "DuelingDQN vs TimeAware": {
+      "t_stat": 62.3055,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 2.7878
+    },
+    "DuelingDQN vs Freshness": {
+      "t_stat": 112.2517,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 5.0226
+    },
+    "DuelingDQN vs BrandQuality": {
+      "t_stat": 99.6615,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 4.4592
+    },
+    "DuelingDQN vs Random": {
+      "t_stat": 69.7279,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "DuelingDQN",
+      "cohens_d": 3.1199
+    },
+    "PPO vs REINFORCE": {
+      "t_stat": -45.5235,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 2.0369
+    },
+    "PPO vs A2C": {
+      "t_stat": -15.3319,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "A2C",
+      "cohens_d": 0.686
+    },
+    "PPO vs ValueIter": {
+      "t_stat": -6.2317,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ValueIter",
+      "cohens_d": 0.2788
+    },
+    "PPO vs Greedy": {
+      "t_stat": 10.2882,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "PPO",
+      "cohens_d": 0.4603
+    },
+    "PPO vs TimeAware": {
+      "t_stat": -29.1026,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 1.3022
+    },
+    "PPO vs Freshness": {
+      "t_stat": 12.6641,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "PPO",
+      "cohens_d": 0.5666
+    },
+    "PPO vs BrandQuality": {
+      "t_stat": 28.3175,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "PPO",
+      "cohens_d": 1.267
+    },
+    "PPO vs Random": {
+      "t_stat": 25.1407,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "PPO",
+      "cohens_d": 1.1249
+    },
+    "REINFORCE vs A2C": {
+      "t_stat": 29.9324,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 1.3393
+    },
+    "REINFORCE vs ValueIter": {
+      "t_stat": 40.3761,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 1.8066
+    },
+    "REINFORCE vs Greedy": {
+      "t_stat": 46.8332,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 2.0955
+    },
+    "REINFORCE vs TimeAware": {
+      "t_stat": 16.1807,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 0.724
+    },
+    "REINFORCE vs Freshness": {
+      "t_stat": 59.6015,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 2.6668
+    },
+    "REINFORCE vs BrandQuality": {
+      "t_stat": 63.3153,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 2.833
+    },
+    "REINFORCE vs Random": {
+      "t_stat": 47.9266,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "REINFORCE",
+      "cohens_d": 2.1444
+    },
+    "A2C vs ValueIter": {
+      "t_stat": 9.4954,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "A2C",
+      "cohens_d": 0.4249
+    },
+    "A2C vs Greedy": {
+      "t_stat": 22.5976,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "A2C",
+      "cohens_d": 1.0111
+    },
+    "A2C vs TimeAware": {
+      "t_stat": -13.6868,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 0.6124
+    },
+    "A2C vs Freshness": {
+      "t_stat": 28.3877,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "A2C",
+      "cohens_d": 1.2702
+    },
+    "A2C vs BrandQuality": {
+      "t_stat": 40.0526,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "A2C",
+      "cohens_d": 1.7921
+    },
+    "A2C vs Random": {
+      "t_stat": 32.8304,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "A2C",
+      "cohens_d": 1.469
+    },
+    "ValueIter vs Greedy": {
+      "t_stat": 15.4113,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ValueIter",
+      "cohens_d": 0.6896
+    },
+    "ValueIter vs TimeAware": {
+      "t_stat": -23.5881,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 1.0554
+    },
+    "ValueIter vs Freshness": {
+      "t_stat": 19.4143,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ValueIter",
+      "cohens_d": 0.8687
+    },
+    "ValueIter vs BrandQuality": {
+      "t_stat": 33.4594,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ValueIter",
+      "cohens_d": 1.4971
+    },
+    "ValueIter vs Random": {
+      "t_stat": 28.3608,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "ValueIter",
+      "cohens_d": 1.269
+    },
+    "Greedy vs TimeAware": {
+      "t_stat": -33.6744,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 1.5067
+    },
+    "Greedy vs Freshness": {
+      "t_stat": -0.4102,
+      "p_value": 0.681697,
+      "significant": false,
+      "better": "Freshness",
+      "cohens_d": 0.0184
+    },
+    "Greedy vs BrandQuality": {
+      "t_stat": 16.0556,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "Greedy",
+      "cohens_d": 0.7184
+    },
+    "Greedy vs Random": {
+      "t_stat": 17.5435,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "Greedy",
+      "cohens_d": 0.785
+    },
+    "TimeAware vs Freshness": {
+      "t_stat": 42.5872,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 1.9055
+    },
+    "TimeAware vs BrandQuality": {
+      "t_stat": 50.6676,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 2.2671
+    },
+    "TimeAware vs Random": {
+      "t_stat": 39.7511,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "TimeAware",
+      "cohens_d": 1.7786
+    },
+    "Freshness vs BrandQuality": {
+      "t_stat": 19.1823,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "Freshness",
+      "cohens_d": 0.8583
+    },
+    "Freshness vs Random": {
+      "t_stat": 19.1034,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "Freshness",
+      "cohens_d": 0.8548
+    },
+    "BrandQuality vs Random": {
+      "t_stat": 6.1409,
+      "p_value": 0.0,
+      "significant": true,
+      "better": "BrandQuality",
+      "cohens_d": 0.2748
+    }
+  },
+  "oracle_benchmark": {
+    "oracle": {
+      "mean_reward": 616.5199,
+      "ci95_reward": 1.1483,
+      "mean_cr": 1.0,
+      "success_rate": 1.0
+    },
+    "agents": {
+      "Q-Learning": {
+        "mean_reward": 110.0452,
+        "ci95_reward": 10.1194,
+        "mean_cr": 0.7489,
+        "success_rate": 0.314,
+        "optimality_gap_pct": 82.17,
+        "gap_std_pct": 26.51
+      },
+      "SARSA": {
+        "mean_reward": 76.0399,
+        "ci95_reward": 12.0116,
+        "mean_cr": 0.644,
+        "success_rate": 0.215,
+        "optimality_gap_pct": 87.74,
+        "gap_std_pct": 31.43
+      },
+      "ExpSARSA": {
+        "mean_reward": 176.3476,
+        "ci95_reward": 12.8259,
+        "mean_cr": 0.7231,
+        "success_rate": 0.323,
+        "optimality_gap_pct": 71.47,
+        "gap_std_pct": 33.52
+      },
+      "DQN": {
+        "mean_reward": 336.034,
+        "ci95_reward": 6.2615,
+        "mean_cr": 0.9445,
+        "success_rate": 0.455,
+        "optimality_gap_pct": 45.44,
+        "gap_std_pct": 16.47
+      },
+      "DoubleDQN": {
+        "mean_reward": 498.7915,
+        "ci95_reward": 6.0517,
+        "mean_cr": 0.9677,
+        "success_rate": 0.538,
+        "optimality_gap_pct": 19.06,
+        "gap_std_pct": 15.92
+      },
+      "DuelingDQN": {
+        "mean_reward": 382.0875,
+        "ci95_reward": 3.3824,
+        "mean_cr": 0.9978,
+        "success_rate": 0.959,
+        "optimality_gap_pct": 37.97,
+        "gap_std_pct": 9.08
+      },
+      "PPO": {
+        "mean_reward": 119.6531,
+        "ci95_reward": 4.2448,
+        "mean_cr": 0.951,
+        "success_rate": 0.362,
+        "optimality_gap_pct": 80.59,
+        "gap_std_pct": 11.11
+      },
+      "REINFORCE": {
+        "mean_reward": 258.4642,
+        "ci95_reward": 4.2029,
+        "mean_cr": 0.9474,
+        "success_rate": 0.351,
+        "optimality_gap_pct": 58.06,
+        "gap_std_pct": 11.01
+      },
+      "A2C": {
+        "mean_reward": 166.8234,
+        "ci95_reward": 4.2788,
+        "mean_cr": 0.9964,
+        "success_rate": 0.93,
+        "optimality_gap_pct": 72.91,
+        "gap_std_pct": 11.25
+      },
+      "ValueIter": {
+        "mean_reward": 138.2965,
+        "ci95_reward": 4.041,
+        "mean_cr": 0.9958,
+        "success_rate": 0.918,
+        "optimality_gap_pct": 77.54,
+        "gap_std_pct": 10.63
+      },
+      "Greedy": {
+        "mean_reward": 80.4151,
+        "ci95_reward": 6.1486,
+        "mean_cr": 0.8962,
+        "success_rate": 0.331,
+        "optimality_gap_pct": 86.97,
+        "gap_std_pct": 16.09
+      },
+      "TimeAware": {
+        "mean_reward": 209.0206,
+        "ci95_reward": 4.2627,
+        "mean_cr": 0.9926,
+        "success_rate": 0.954,
+        "optimality_gap_pct": 66.05,
+        "gap_std_pct": 11.24
+      },
+      "Freshness": {
+        "mean_reward": 81.951,
+        "ci95_reward": 3.9995,
+        "mean_cr": 1.0,
+        "success_rate": 1.0,
+        "optimality_gap_pct": 86.69,
+        "gap_std_pct": 10.49
+      },
+      "BrandQuality": {
+        "mean_reward": 6.7447,
+        "ci95_reward": 6.557,
+        "mean_cr": 0.8002,
+        "success_rate": 0.088,
+        "optimality_gap_pct": 98.92,
+        "gap_std_pct": 17.15
+      },
+      "Random": {
+        "mean_reward": -33.9033,
+        "ci95_reward": 11.1872,
+        "mean_cr": 0.6286,
+        "success_rate": 0.126,
+        "optimality_gap_pct": 105.52,
+        "gap_std_pct": 29.31
+      }
+    },
+    "n_episodes": 1000,
+    "seed_base": 99000
+  },
+  "policy_analysis": {
+    "agent_policies": {
+      "Q-Learning": {
+        "dominant_store": 1,
+        "avg_route_length": 1.44,
+        "visit_freq": [
+          1.0,
+          0.189,
+          0.052,
+          0.085,
+          0.045,
+          0.054
+        ],
+        "second_store_freq": [
+          0.0,
+          0.18,
+          0.04,
+          0.085,
+          0.032,
+          0.054
+        ],
+        "top_5_routes": [
+          [
+            [
+              0
+            ],
+            609
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            164
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            70
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            49
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            36
+          ]
+        ],
+        "mean_reward": 110.0452,
+        "mean_cr": 0.7489
+      },
+      "SARSA": {
+        "dominant_store": 3,
+        "avg_route_length": 1.28,
+        "visit_freq": [
+          1.0,
+          0.076,
+          0.065,
+          0.081,
+          0.045,
+          0.006
+        ],
+        "second_store_freq": [
+          0.0,
+          0.076,
+          0.056,
+          0.072,
+          0.037,
+          0.006
+        ],
+        "top_5_routes": [
+          [
+            [
+              0
+            ],
+            753
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            68
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            67
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            42
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            35
+          ]
+        ],
+        "mean_reward": 76.0399,
+        "mean_cr": 0.644
+      },
+      "ExpSARSA": {
+        "dominant_store": 3,
+        "avg_route_length": 1.37,
+        "visit_freq": [
+          1.0,
+          0.069,
+          0.073,
+          0.096,
+          0.035,
+          0.077
+        ],
+        "second_store_freq": [
+          0.0,
+          0.06,
+          0.072,
+          0.096,
+          0.021,
+          0.077
+        ],
+        "top_5_routes": [
+          [
+            [
+              0
+            ],
+            674
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            81
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            69
+          ],
+          [
+            [
+              0,
+              5
+            ],
+            65
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            57
+          ]
+        ],
+        "mean_reward": 176.3476,
+        "mean_cr": 0.7231
+      },
+      "DQN": {
+        "dominant_store": 5,
+        "avg_route_length": 12.79,
+        "visit_freq": [
+          1.0,
+          0.321,
+          0.343,
+          0.032,
+          0.515,
+          0.963
+        ],
+        "second_store_freq": [
+          0.0,
+          0.008,
+          0.109,
+          0.0,
+          0.018,
+          0.865
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5
+            ],
+            225
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              4,
+              0,
+              4,
+              0,
+              4,
+              0,
+              4,
+              0,
+              4,
+              0
+            ],
+            45
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              2,
+              5,
+              2,
+              5,
+              2,
+              5,
+              2,
+              5,
+              2,
+              5
+            ],
+            35
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              4,
+              0,
+              1,
+              0,
+              4,
+              0,
+              4
+            ],
+            31
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              4,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5
+            ],
+            28
+          ]
+        ],
+        "mean_reward": 336.034,
+        "mean_cr": 0.9445
+      },
+      "DoubleDQN": {
+        "dominant_store": 3,
+        "avg_route_length": 10.23,
+        "visit_freq": [
+          1.0,
+          0.785,
+          0.001,
+          0.999,
+          0.041,
+          0.521
+        ],
+        "second_store_freq": [
+          0.0,
+          0.002,
+          0.0,
+          0.48,
+          0.0,
+          0.518
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3
+            ],
+            121
+          ],
+          [
+            [
+              0,
+              5,
+              3,
+              0,
+              1
+            ],
+            109
+          ],
+          [
+            [
+              0,
+              5,
+              3,
+              1
+            ],
+            101
+          ],
+          [
+            [
+              0,
+              3,
+              1,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0,
+              3,
+              0
+            ],
+            73
+          ],
+          [
+            [
+              0,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1
+            ],
+            61
+          ]
+        ],
+        "mean_reward": 498.7915,
+        "mean_cr": 0.9677
+      },
+      "DuelingDQN": {
+        "dominant_store": 1,
+        "avg_route_length": 10.0,
+        "visit_freq": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "second_store_freq": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              2,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1
+            ],
+            789
+          ],
+          [
+            [
+              0,
+              2,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3
+            ],
+            210
+          ],
+          [
+            [
+              0,
+              2,
+              1,
+              2,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1
+            ],
+            1
+          ]
+        ],
+        "mean_reward": 382.0875,
+        "mean_cr": 0.9978
+      },
+      "PPO": {
+        "dominant_store": 3,
+        "avg_route_length": 12.96,
+        "visit_freq": [
+          1.0,
+          0.0,
+          0.018,
+          1.0,
+          0.0,
+          0.997
+        ],
+        "second_store_freq": [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5
+            ],
+            982
+          ],
+          [
+            [
+              0,
+              3,
+              2,
+              3,
+              5,
+              3,
+              5,
+              3,
+              5,
+              3
+            ],
+            8
+          ],
+          [
+            [
+              0,
+              3,
+              5,
+              3,
+              2,
+              3,
+              5,
+              3,
+              5,
+              3
+            ],
+            5
+          ],
+          [
+            [
+              0,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2
+            ],
+            3
+          ],
+          [
+            [
+              0,
+              3,
+              5,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            1
+          ]
+        ],
+        "mean_reward": 119.6531,
+        "mean_cr": 0.951
+      },
+      "REINFORCE": {
+        "dominant_store": 5,
+        "avg_route_length": 15.05,
+        "visit_freq": [
+          1.0,
+          0.31,
+          0.0,
+          0.012,
+          0.0,
+          1.0
+        ],
+        "second_store_freq": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5
+            ],
+            679
+          ],
+          [
+            [
+              0,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1
+            ],
+            270
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1,
+              5,
+              1
+            ],
+            13
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              1
+            ],
+            8
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              1
+            ],
+            7
+          ]
+        ],
+        "mean_reward": 258.4642,
+        "mean_cr": 0.9474
+      },
+      "A2C": {
+        "dominant_store": 1,
+        "avg_route_length": 16.0,
+        "visit_freq": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_store_freq": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            1000
+          ]
+        ],
+        "mean_reward": 166.8234,
+        "mean_cr": 0.9964
+      },
+      "ValueIter": {
+        "dominant_store": 1,
+        "avg_route_length": 2.91,
+        "visit_freq": [
+          1.0,
+          0.762,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "second_store_freq": [
+          0.0,
+          0.762,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              1
+            ],
+            680
+          ],
+          [
+            [
+              0
+            ],
+            238
+          ],
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            82
+          ]
+        ],
+        "mean_reward": 138.2965,
+        "mean_cr": 0.9958
+      },
+      "Greedy": {
+        "dominant_store": 1,
+        "avg_route_length": 9.59,
+        "visit_freq": [
+          1.0,
+          0.915,
+          0.644,
+          0.54,
+          0.635,
+          0.681
+        ],
+        "second_store_freq": [
+          0.0,
+          0.581,
+          0.065,
+          0.013,
+          0.152,
+          0.189
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            118
+          ],
+          [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            26
+          ],
+          [
+            [
+              0,
+              1,
+              5,
+              2,
+              3,
+              4
+            ],
+            26
+          ],
+          [
+            [
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5,
+              0,
+              5
+            ],
+            20
+          ],
+          [
+            [
+              0,
+              5,
+              1,
+              2,
+              3,
+              4
+            ],
+            16
+          ]
+        ],
+        "mean_reward": 80.4151,
+        "mean_cr": 0.8962
+      },
+      "TimeAware": {
+        "dominant_store": 2,
+        "avg_route_length": 5.95,
+        "visit_freq": [
+          1.0,
+          0.965,
+          1.0,
+          0.98,
+          0.978,
+          0.951
+        ],
+        "second_store_freq": [
+          0.0,
+          0.007,
+          0.992,
+          0.0,
+          0.001,
+          0.0
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              2,
+              1,
+              3,
+              4,
+              5
+            ],
+            149
+          ],
+          [
+            [
+              0,
+              2,
+              3,
+              1,
+              4,
+              5
+            ],
+            139
+          ],
+          [
+            [
+              0,
+              2,
+              4,
+              1,
+              3,
+              5
+            ],
+            123
+          ],
+          [
+            [
+              0,
+              2,
+              3,
+              4,
+              1,
+              5
+            ],
+            79
+          ],
+          [
+            [
+              0,
+              2,
+              5,
+              1,
+              3,
+              4
+            ],
+            65
+          ]
+        ],
+        "mean_reward": 209.0206,
+        "mean_cr": 0.9926
+      },
+      "Freshness": {
+        "dominant_store": 1,
+        "avg_route_length": 6.0,
+        "visit_freq": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "second_store_freq": [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            1000
+          ]
+        ],
+        "mean_reward": 81.951,
+        "mean_cr": 1.0
+      },
+      "BrandQuality": {
+        "dominant_store": 1,
+        "avg_route_length": 11.06,
+        "visit_freq": [
+          1.0,
+          0.984,
+          0.38,
+          0.352,
+          0.644,
+          0.375
+        ],
+        "second_store_freq": [
+          0.0,
+          0.943,
+          0.007,
+          0.002,
+          0.034,
+          0.014
+        ],
+        "top_5_routes": [
+          [
+            [
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            154
+          ],
+          [
+            [
+              0,
+              1,
+              4,
+              1,
+              4,
+              1,
+              4,
+              1,
+              4,
+              1,
+              4,
+              1,
+              4
+            ],
+            80
+          ],
+          [
+            [
+              0,
+              1,
+              4,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1
+            ],
+            58
+          ],
+          [
+            [
+              0,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3,
+              1,
+              3
+            ],
+            22
+          ],
+          [
+            [
+              0,
+              1,
+              4,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            19
+          ]
+        ],
+        "mean_reward": 6.7447,
+        "mean_cr": 0.8002
+      },
+      "Random": {
+        "dominant_store": 3,
+        "avg_route_length": 4.54,
+        "visit_freq": [
+          1.0,
+          0.491,
+          0.471,
+          0.498,
+          0.461,
+          0.462
+        ],
+        "second_store_freq": [
+          0.0,
+          0.164,
+          0.147,
+          0.175,
+          0.179,
+          0.164
+        ],
+        "top_5_routes": [
+          [
+            [
+              0
+            ],
+            171
+          ],
+          [
+            [
+              0,
+              3
+            ],
+            31
+          ],
+          [
+            [
+              0,
+              4
+            ],
+            24
+          ],
+          [
+            [
+              0,
+              2
+            ],
+            23
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            22
+          ]
+        ],
+        "mean_reward": -33.9033,
+        "mean_cr": 0.6286
+      }
+    },
+    "store_characteristics": [
+      {
+        "store_id": 0,
+        "avg_best_pref_score": 4.45,
+        "avg_price_premium_pct": 3.72,
+        "brands_stocked_per_good": 3,
+        "travel_time_min": 5
+      },
+      {
+        "store_id": 1,
+        "avg_best_pref_score": 4.55,
+        "avg_price_premium_pct": 3.07,
+        "brands_stocked_per_good": 3,
+        "travel_time_min": 5
+      },
+      {
+        "store_id": 2,
+        "avg_best_pref_score": 4.55,
+        "avg_price_premium_pct": 1.1,
+        "brands_stocked_per_good": 3,
+        "travel_time_min": 5
+      },
+      {
+        "store_id": 3,
+        "avg_best_pref_score": 4.55,
+        "avg_price_premium_pct": 0.24,
+        "brands_stocked_per_good": 3,
+        "travel_time_min": 5
+      },
+      {
+        "store_id": 4,
+        "avg_best_pref_score": 4.65,
+        "avg_price_premium_pct": -1.45,
+        "brands_stocked_per_good": 3,
+        "travel_time_min": 5
+      },
+      {
+        "store_id": 5,
+        "avg_best_pref_score": 4.4,
+        "avg_price_premium_pct": 1.71,
+        "brands_stocked_per_good": 3,
+        "travel_time_min": 5
+      }
+    ],
+    "n_episodes": 1000
+  },
+  "environment_parameters": {
+    "global_parameters": {
+      "n_stores": 6,
+      "n_goods": 20,
+      "n_brands_per_good": 5,
+      "brands_per_store": 3,
+      "total_duration_min": 120,
+      "travel_time_min": 5,
+      "visit_time_min": 15,
+      "availability_prob": 0.6,
+      "price_premium_range": "[-30%, +30%]  (uniform, fixed per store-good-brand)",
+      "expiry_range_days": "[0, 7]  (uniform integer, stochastic per episode)",
+      "graph_structure": "Star \u2014 all stores equidistant at 5 min travel",
+      "reward_missing_item": -20.0,
+      "reward_premium": -1.0,
+      "reward_pref_score": 2.0,
+      "reward_expiry": 0.5,
+      "reward_store_visit": -2.0
+    },
+    "store_table": [
+      {
+        "store_id": 0,
+        "brands_stocked_per_good": 3,
+        "avg_best_pref_score": 4.45,
+        "avg_price_premium_pct": 3.72,
+        "travel_time_min": 5,
+        "graph_role": "Start node"
+      },
+      {
+        "store_id": 1,
+        "brands_stocked_per_good": 3,
+        "avg_best_pref_score": 4.55,
+        "avg_price_premium_pct": 3.07,
+        "travel_time_min": 5,
+        "graph_role": "Spoke"
+      },
+      {
+        "store_id": 2,
+        "brands_stocked_per_good": 3,
+        "avg_best_pref_score": 4.55,
+        "avg_price_premium_pct": 1.1,
+        "travel_time_min": 5,
+        "graph_role": "Spoke"
+      },
+      {
+        "store_id": 3,
+        "brands_stocked_per_good": 3,
+        "avg_best_pref_score": 4.55,
+        "avg_price_premium_pct": 0.24,
+        "travel_time_min": 5,
+        "graph_role": "Spoke"
+      },
+      {
+        "store_id": 4,
+        "brands_stocked_per_good": 3,
+        "avg_best_pref_score": 4.65,
+        "avg_price_premium_pct": -1.45,
+        "travel_time_min": 5,
+        "graph_role": "Spoke"
+      },
+      {
+        "store_id": 5,
+        "brands_stocked_per_good": 3,
+        "avg_best_pref_score": 4.4,
+        "avg_price_premium_pct": 1.71,
+        "travel_time_min": 5,
+        "graph_role": "Spoke"
+      }
+    ],
+    "note": "All parameters listed here are fixed at environment initialisation (seed=42). Stochastic variables \u2014 per-episode brand availability and expiry date realisations \u2014 are not listed as they vary each episode."
+  },
+  "parametric": {
+    "duration": {
+      "60": {
+        "Q-Learning": {
+          "mean_reward": 110.0492,
+          "std_reward": 163.2697,
+          "ci95_reward": 10.1196,
+          "mean_cr": 0.7489,
+          "std_cr": 0.2432,
+          "ci95_cr": 0.0151,
+          "mean_stores": 1.425,
+          "ci95_stores": 0.0346,
+          "mean_time": 23.54,
+          "mean_premium": -6.2635,
+          "mean_pref": 3.1826,
+          "mean_expiry": 3.5216,
+          "success_rate": 0.314
+        },
+        "SARSA": {
+          "mean_reward": 111.292,
+          "std_reward": 199.5411,
+          "ci95_reward": 12.3677,
+          "mean_cr": 0.6897,
+          "std_cr": 0.2653,
+          "ci95_cr": 0.0164,
+          "mean_stores": 1.31,
+          "ci95_stores": 0.0329,
+          "mean_time": 21.245,
+          "mean_premium": -9.1994,
+          "mean_pref": 3.1299,
+          "mean_expiry": 3.5109,
+          "success_rate": 0.244
+        },
+        "ExpSARSA": {
+          "mean_reward": 171.0606,
+          "std_reward": 209.5904,
+          "ci95_reward": 12.9905,
+          "mean_cr": 0.7211,
+          "std_cr": 0.2617,
+          "ci95_cr": 0.0162,
+          "mean_stores": 1.432,
+          "ci95_stores": 0.0367,
+          "mean_time": 23.72,
+          "mean_premium": -11.9556,
+          "mean_pref": 3.0655,
+          "mean_expiry": 3.5149,
+          "success_rate": 0.327
+        },
+        "DQN": {
+          "mean_reward": 368.2628,
+          "std_reward": 65.8243,
+          "ci95_reward": 4.0798,
+          "mean_cr": 0.9608,
+          "std_cr": 0.0416,
+          "ci95_cr": 0.0026,
+          "mean_stores": 2.0,
+          "ci95_stores": 0.0,
+          "mean_time": 45.0,
+          "mean_premium": -11.4017,
+          "mean_pref": 3.5707,
+          "mean_expiry": 3.515,
+          "success_rate": 0.436
+        },
+        "DoubleDQN": {
+          "mean_reward": 377.3779,
+          "std_reward": 80.5729,
+          "ci95_reward": 4.994,
+          "mean_cr": 0.8955,
+          "std_cr": 0.0439,
+          "ci95_cr": 0.0027,
+          "mean_stores": 2.055,
+          "ci95_stores": 0.0141,
+          "mean_time": 45.37,
+          "mean_premium": -15.9225,
+          "mean_pref": 3.0036,
+          "mean_expiry": 3.4974,
+          "success_rate": 0.033
+        },
+        "DuelingDQN": {
+          "mean_reward": 304.4372,
+          "std_reward": 66.0807,
+          "ci95_reward": 4.0957,
+          "mean_cr": 0.9666,
+          "std_cr": 0.0416,
+          "ci95_cr": 0.0026,
+          "mean_stores": 3.0,
+          "ci95_stores": 0.0,
+          "mean_time": 55.0,
+          "mean_premium": -8.5817,
+          "mean_pref": 3.156,
+          "mean_expiry": 3.5017,
+          "success_rate": 0.519
+        },
+        "PPO": {
+          "mean_reward": 141.808,
+          "std_reward": 70.8323,
+          "ci95_reward": 4.3902,
+          "mean_cr": 0.9516,
+          "std_cr": 0.0474,
+          "ci95_cr": 0.0029,
+          "mean_stores": 3.0,
+          "ci95_stores": 0.0,
+          "mean_time": 55.0,
+          "mean_premium": -0.5462,
+          "mean_pref": 3.1874,
+          "mean_expiry": 3.5137,
+          "success_rate": 0.366
+        },
+        "REINFORCE": {
+          "mean_reward": 237.8809,
+          "std_reward": 71.7066,
+          "ci95_reward": 4.4444,
+          "mean_cr": 0.971,
+          "std_cr": 0.0378,
+          "ci95_cr": 0.0023,
+          "mean_stores": 3.0,
+          "ci95_stores": 0.0,
+          "mean_time": 55.0,
+          "mean_premium": -4.8061,
+          "mean_pref": 3.242,
+          "mean_expiry": 3.5295,
+          "success_rate": 0.558
+        },
+        "A2C": {
+          "mean_reward": 181.2189,
+          "std_reward": 74.7344,
+          "ci95_reward": 4.6321,
+          "mean_cr": 0.9958,
+          "std_cr": 0.0149,
+          "ci95_cr": 0.0009,
+          "mean_stores": 2.0,
+          "ci95_stores": 0.0,
+          "mean_time": 45.0,
+          "mean_premium": -1.9364,
+          "mean_pref": 2.9,
+          "mean_expiry": 3.4943,
+          "success_rate": 0.921
+        },
+        "ValueIter": {
+          "mean_reward": 140.2645,
+          "std_reward": 63.9642,
+          "ci95_reward": 3.9645,
+          "mean_cr": 0.9958,
+          "std_cr": 0.0145,
+          "ci95_cr": 0.0009,
+          "mean_stores": 1.762,
+          "ci95_stores": 0.0264,
+          "mean_time": 31.06,
+          "mean_premium": 2.2008,
+          "mean_pref": 3.7764,
+          "mean_expiry": 3.7396,
+          "success_rate": 0.918
+        },
+        "Greedy": {
+          "mean_reward": 45.2258,
+          "std_reward": 94.9187,
+          "ci95_reward": 5.8831,
+          "mean_cr": 0.812,
+          "std_cr": 0.113,
+          "ci95_cr": 0.007,
+          "mean_stores": 2.852,
+          "ci95_stores": 0.022,
+          "mean_time": 54.63,
+          "mean_premium": 1.5352,
+          "mean_pref": 4.2424,
+          "mean_expiry": 1.5128,
+          "success_rate": 0.042
+        },
+        "TimeAware": {
+          "mean_reward": 211.2022,
+          "std_reward": 66.7766,
+          "ci95_reward": 4.1389,
+          "mean_cr": 0.9854,
+          "std_cr": 0.0367,
+          "ci95_cr": 0.0023,
+          "mean_stores": 2.989,
+          "ci95_stores": 0.0065,
+          "mean_time": 54.78,
+          "mean_premium": -0.2236,
+          "mean_pref": 4.3455,
+          "mean_expiry": 4.6098,
+          "success_rate": 0.781
+        },
+        "Freshness": {
+          "mean_reward": 86.3659,
+          "std_reward": 64.5053,
+          "ci95_reward": 3.9981,
+          "mean_cr": 0.9974,
+          "std_cr": 0.0113,
+          "ci95_cr": 0.0007,
+          "mean_stores": 3.0,
+          "ci95_stores": 0.0,
+          "mean_time": 55.0,
+          "mean_premium": 3.7899,
+          "mean_pref": 3.4901,
+          "mean_expiry": 2.7835,
+          "success_rate": 0.949
+        },
+        "BrandQuality": {
+          "mean_reward": -18.3639,
+          "std_reward": 90.8672,
+          "ci95_reward": 5.632,
+          "mean_cr": 0.7315,
+          "std_cr": 0.1216,
+          "ci95_cr": 0.0075,
+          "mean_stores": 2.834,
+          "ci95_stores": 0.0231,
+          "mean_time": 53.835,
+          "mean_premium": 3.6672,
+          "mean_pref": 4.6401,
+          "mean_expiry": 1.5331,
+          "success_rate": 0.006
+        },
+        "Random": {
+          "mean_reward": -52.9537,
+          "std_reward": 179.1816,
+          "ci95_reward": 11.1058,
+          "mean_cr": 0.5927,
+          "std_cr": 0.2951,
+          "ci95_cr": 0.0183,
+          "mean_stores": 2.495,
+          "ci95_stores": 0.0463,
+          "mean_time": 45.785,
+          "mean_premium": -2.0682,
+          "mean_pref": 2.9755,
+          "mean_expiry": 3.4129,
+          "success_rate": 0.054
+        }
+      },
+      "120": {
+        "Q-Learning": {
+          "mean_reward": 110.0452,
+          "std_reward": 163.2667,
+          "ci95_reward": 10.1194,
+          "mean_cr": 0.7489,
+          "std_cr": 0.2432,
+          "ci95_cr": 0.0151,
+          "mean_stores": 1.425,
+          "ci95_stores": 0.0346,
+          "mean_time": 23.55,
+          "mean_premium": -6.2635,
+          "mean_pref": 3.1826,
+          "mean_expiry": 3.5216,
+          "success_rate": 0.314
+        },
+        "SARSA": {
+          "mean_reward": 76.0399,
+          "std_reward": 193.7954,
+          "ci95_reward": 12.0116,
+          "mean_cr": 0.644,
+          "std_cr": 0.2636,
+          "ci95_cr": 0.0163,
+          "mean_stores": 1.273,
+          "ci95_stores": 0.031,
+          "mean_time": 20.475,
+          "mean_premium": -9.2085,
+          "mean_pref": 3.1422,
+          "mean_expiry": 3.5081,
+          "success_rate": 0.215
+        },
+        "ExpSARSA": {
+          "mean_reward": 176.3476,
+          "std_reward": 206.9343,
+          "ci95_reward": 12.8259,
+          "mean_cr": 0.7231,
+          "std_cr": 0.2521,
+          "ci95_cr": 0.0156,
+          "mean_stores": 1.35,
+          "ci95_stores": 0.0325,
+          "mean_time": 22.09,
+          "mean_premium": -12.149,
+          "mean_pref": 3.0417,
+          "mean_expiry": 3.5019,
+          "success_rate": 0.323
+        },
+        "DQN": {
+          "mean_reward": 336.034,
+          "std_reward": 101.0236,
+          "ci95_reward": 6.2615,
+          "mean_cr": 0.9445,
+          "std_cr": 0.0994,
+          "ci95_cr": 0.0062,
+          "mean_stores": 3.174,
+          "ci95_stores": 0.0551,
+          "mean_time": 106.555,
+          "mean_premium": -11.4483,
+          "mean_pref": 3.571,
+          "mean_expiry": 3.5003,
+          "success_rate": 0.455
+        },
+        "DoubleDQN": {
+          "mean_reward": 498.7915,
+          "std_reward": 97.6385,
+          "ci95_reward": 6.0517,
+          "mean_cr": 0.9677,
+          "std_cr": 0.0422,
+          "ci95_cr": 0.0026,
+          "mean_stores": 3.347,
+          "ci95_stores": 0.0426,
+          "mean_time": 96.335,
+          "mean_premium": -19.1942,
+          "mean_pref": 3.1888,
+          "mean_expiry": 3.5316,
+          "success_rate": 0.538
+        },
+        "DuelingDQN": {
+          "mean_reward": 382.0875,
+          "std_reward": 54.5714,
+          "ci95_reward": 3.3824,
+          "mean_cr": 0.9978,
+          "std_cr": 0.011,
+          "ci95_cr": 0.0007,
+          "mean_stores": 4.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -12.5077,
+          "mean_pref": 2.9187,
+          "mean_expiry": 3.4985,
+          "success_rate": 0.959
+        },
+        "PPO": {
+          "mean_reward": 119.6531,
+          "std_reward": 68.4857,
+          "ci95_reward": 4.2448,
+          "mean_cr": 0.951,
+          "std_cr": 0.0477,
+          "ci95_cr": 0.003,
+          "mean_stores": 3.015,
+          "ci95_stores": 0.0075,
+          "mean_time": 105.0,
+          "mean_premium": -0.4576,
+          "mean_pref": 3.1827,
+          "mean_expiry": 3.5119,
+          "success_rate": 0.362
+        },
+        "REINFORCE": {
+          "mean_reward": 258.4642,
+          "std_reward": 67.8094,
+          "ci95_reward": 4.2029,
+          "mean_cr": 0.9474,
+          "std_cr": 0.0506,
+          "ci95_cr": 0.0031,
+          "mean_stores": 2.322,
+          "ci95_stores": 0.0291,
+          "mean_time": 105.1,
+          "mean_premium": -8.3499,
+          "mean_pref": 3.0771,
+          "mean_expiry": 3.4907,
+          "success_rate": 0.351
+        },
+        "A2C": {
+          "mean_reward": 166.8234,
+          "std_reward": 69.035,
+          "ci95_reward": 4.2788,
+          "mean_cr": 0.9964,
+          "std_cr": 0.0133,
+          "ci95_cr": 0.0008,
+          "mean_stores": 2.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -2.5423,
+          "mean_pref": 2.8293,
+          "mean_expiry": 3.4995,
+          "success_rate": 0.93
+        },
+        "ValueIter": {
+          "mean_reward": 138.2965,
+          "std_reward": 65.1985,
+          "ci95_reward": 4.041,
+          "mean_cr": 0.9958,
+          "std_cr": 0.0145,
+          "ci95_cr": 0.0009,
+          "mean_stores": 1.762,
+          "ci95_stores": 0.0264,
+          "mean_time": 35.98,
+          "mean_premium": 2.2008,
+          "mean_pref": 3.7764,
+          "mean_expiry": 3.7396,
+          "success_rate": 0.918
+        },
+        "Greedy": {
+          "mean_reward": 80.4151,
+          "std_reward": 99.2013,
+          "ci95_reward": 6.1486,
+          "mean_cr": 0.8962,
+          "std_cr": 0.1126,
+          "ci95_cr": 0.007,
+          "mean_stores": 4.415,
+          "ci95_stores": 0.0919,
+          "mean_time": 109.15,
+          "mean_premium": 1.4595,
+          "mean_pref": 4.2427,
+          "mean_expiry": 1.5073,
+          "success_rate": 0.331
+        },
+        "TimeAware": {
+          "mean_reward": 209.0206,
+          "std_reward": 68.7746,
+          "ci95_reward": 4.2627,
+          "mean_cr": 0.9926,
+          "std_cr": 0.0444,
+          "ci95_cr": 0.0028,
+          "mean_stores": 5.874,
+          "ci95_stores": 0.0374,
+          "mean_time": 112.855,
+          "mean_premium": 0.1404,
+          "mean_pref": 4.4527,
+          "mean_expiry": 4.8319,
+          "success_rate": 0.954
+        },
+        "Freshness": {
+          "mean_reward": 81.951,
+          "std_reward": 64.5285,
+          "ci95_reward": 3.9995,
+          "mean_cr": 1.0,
+          "std_cr": 0.0,
+          "ci95_cr": 0.0,
+          "mean_stores": 6.0,
+          "ci95_stores": 0.0,
+          "mean_time": 115.0,
+          "mean_premium": 3.7757,
+          "mean_pref": 3.4909,
+          "mean_expiry": 2.7831,
+          "success_rate": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": 6.7447,
+          "std_reward": 105.7916,
+          "ci95_reward": 6.557,
+          "mean_cr": 0.8002,
+          "std_cr": 0.1436,
+          "ci95_cr": 0.0089,
+          "mean_stores": 3.735,
+          "ci95_stores": 0.0763,
+          "mean_time": 106.325,
+          "mean_premium": 3.3794,
+          "mean_pref": 4.6377,
+          "mean_expiry": 1.533,
+          "success_rate": 0.088
+        },
+        "Random": {
+          "mean_reward": -33.9033,
+          "std_reward": 180.4952,
+          "ci95_reward": 11.1872,
+          "mean_cr": 0.6286,
+          "std_cr": 0.301,
+          "ci95_cr": 0.0187,
+          "mean_stores": 3.383,
+          "ci95_stores": 0.0953,
+          "mean_time": 68.42,
+          "mean_premium": -2.0087,
+          "mean_pref": 2.9619,
+          "mean_expiry": 3.4681,
+          "success_rate": 0.126
+        }
+      },
+      "180": {
+        "Q-Learning": {
+          "mean_reward": 144.7713,
+          "std_reward": 147.3846,
+          "ci95_reward": 9.135,
+          "mean_cr": 0.8096,
+          "std_cr": 0.216,
+          "ci95_cr": 0.0134,
+          "mean_stores": 1.625,
+          "ci95_stores": 0.0352,
+          "mean_time": 27.58,
+          "mean_premium": -5.9687,
+          "mean_pref": 3.0604,
+          "mean_expiry": 3.5187,
+          "success_rate": 0.348
+        },
+        "SARSA": {
+          "mean_reward": 111.292,
+          "std_reward": 199.5411,
+          "ci95_reward": 12.3677,
+          "mean_cr": 0.6897,
+          "std_cr": 0.2653,
+          "ci95_cr": 0.0164,
+          "mean_stores": 1.31,
+          "ci95_stores": 0.0329,
+          "mean_time": 21.245,
+          "mean_premium": -9.1994,
+          "mean_pref": 3.1299,
+          "mean_expiry": 3.5109,
+          "success_rate": 0.244
+        },
+        "ExpSARSA": {
+          "mean_reward": 176.3476,
+          "std_reward": 206.9343,
+          "ci95_reward": 12.8259,
+          "mean_cr": 0.7231,
+          "std_cr": 0.2521,
+          "ci95_cr": 0.0156,
+          "mean_stores": 1.35,
+          "ci95_stores": 0.0325,
+          "mean_time": 22.09,
+          "mean_premium": -12.149,
+          "mean_pref": 3.0417,
+          "mean_expiry": 3.5019,
+          "success_rate": 0.323
+        },
+        "DQN": {
+          "mean_reward": 435.3354,
+          "std_reward": 88.8161,
+          "ci95_reward": 5.5049,
+          "mean_cr": 0.9743,
+          "std_cr": 0.0407,
+          "ci95_cr": 0.0025,
+          "mean_stores": 3.474,
+          "ci95_stores": 0.0606,
+          "mean_time": 157.905,
+          "mean_premium": -16.3738,
+          "mean_pref": 3.4394,
+          "mean_expiry": 3.5197,
+          "success_rate": 0.637
+        },
+        "DoubleDQN": {
+          "mean_reward": 376.4495,
+          "std_reward": 133.5126,
+          "ci95_reward": 8.2752,
+          "mean_cr": 0.9707,
+          "std_cr": 0.0543,
+          "ci95_cr": 0.0034,
+          "mean_stores": 3.072,
+          "ci95_stores": 0.0391,
+          "mean_time": 164.97,
+          "mean_premium": -14.1294,
+          "mean_pref": 3.2281,
+          "mean_expiry": 3.5015,
+          "success_rate": 0.657
+        },
+        "DuelingDQN": {
+          "mean_reward": 210.7883,
+          "std_reward": 53.2668,
+          "ci95_reward": 3.3015,
+          "mean_cr": 0.9997,
+          "std_cr": 0.0042,
+          "ci95_cr": 0.0003,
+          "mean_stores": 3.0,
+          "ci95_stores": 0.0,
+          "mean_time": 165.0,
+          "mean_premium": -5.1223,
+          "mean_pref": 3.0364,
+          "mean_expiry": 3.5119,
+          "success_rate": 0.993
+        },
+        "PPO": {
+          "mean_reward": 89.1333,
+          "std_reward": 67.3604,
+          "ci95_reward": 4.175,
+          "mean_cr": 0.9497,
+          "std_cr": 0.0482,
+          "ci95_cr": 0.003,
+          "mean_stores": 3.024,
+          "ci95_stores": 0.0095,
+          "mean_time": 165.0,
+          "mean_premium": -0.115,
+          "mean_pref": 3.1996,
+          "mean_expiry": 3.5111,
+          "success_rate": 0.351
+        },
+        "REINFORCE": {
+          "mean_reward": 206.8789,
+          "std_reward": 65.8703,
+          "ci95_reward": 4.0827,
+          "mean_cr": 0.9782,
+          "std_cr": 0.0347,
+          "ci95_cr": 0.0022,
+          "mean_stores": 3.122,
+          "ci95_stores": 0.0363,
+          "mean_time": 165.015,
+          "mean_premium": -5.5105,
+          "mean_pref": 3.0909,
+          "mean_expiry": 3.4988,
+          "success_rate": 0.662
+        },
+        "A2C": {
+          "mean_reward": 119.9107,
+          "std_reward": 72.7653,
+          "ci95_reward": 4.51,
+          "mean_cr": 0.9959,
+          "std_cr": 0.0141,
+          "ci95_cr": 0.0009,
+          "mean_stores": 2.0,
+          "ci95_stores": 0.0,
+          "mean_time": 35.0,
+          "mean_premium": 1.6682,
+          "mean_pref": 3.0543,
+          "mean_expiry": 3.522,
+          "success_rate": 0.92
+        },
+        "ValueIter": {
+          "mean_reward": 136.3285,
+          "std_reward": 67.0595,
+          "ci95_reward": 4.1564,
+          "mean_cr": 0.9958,
+          "std_cr": 0.0145,
+          "ci95_cr": 0.0009,
+          "mean_stores": 1.762,
+          "ci95_stores": 0.0264,
+          "mean_time": 40.9,
+          "mean_premium": 2.2008,
+          "mean_pref": 3.7764,
+          "mean_expiry": 3.7396,
+          "success_rate": 0.918
+        },
+        "Greedy": {
+          "mean_reward": 66.1336,
+          "std_reward": 105.1026,
+          "ci95_reward": 6.5143,
+          "mean_cr": 0.8979,
+          "std_cr": 0.1135,
+          "ci95_cr": 0.007,
+          "mean_stores": 4.478,
+          "ci95_stores": 0.0946,
+          "mean_time": 148.235,
+          "mean_premium": 1.4554,
+          "mean_pref": 4.2424,
+          "mean_expiry": 1.507,
+          "success_rate": 0.354
+        },
+        "TimeAware": {
+          "mean_reward": 207.3962,
+          "std_reward": 70.838,
+          "ci95_reward": 4.3906,
+          "mean_cr": 0.9861,
+          "std_cr": 0.0523,
+          "ci95_cr": 0.0032,
+          "mean_stores": 5.804,
+          "ci95_stores": 0.043,
+          "mean_time": 113.555,
+          "mean_premium": 0.1091,
+          "mean_pref": 4.4977,
+          "mean_expiry": 4.9098,
+          "success_rate": 0.872
+        },
+        "Freshness": {
+          "mean_reward": 81.951,
+          "std_reward": 64.5285,
+          "ci95_reward": 3.9995,
+          "mean_cr": 1.0,
+          "std_cr": 0.0,
+          "ci95_cr": 0.0,
+          "mean_stores": 6.0,
+          "ci95_stores": 0.0,
+          "mean_time": 115.0,
+          "mean_premium": 3.7757,
+          "mean_pref": 3.4909,
+          "mean_expiry": 2.7831,
+          "success_rate": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": -14.2008,
+          "std_reward": 109.2257,
+          "ci95_reward": 6.7699,
+          "mean_cr": 0.8011,
+          "std_cr": 0.1445,
+          "ci95_cr": 0.009,
+          "mean_stores": 3.748,
+          "ci95_stores": 0.0774,
+          "mean_time": 160.3,
+          "mean_premium": 3.3747,
+          "mean_pref": 4.6377,
+          "mean_expiry": 1.5332,
+          "success_rate": 0.097
+        },
+        "Random": {
+          "mean_reward": -38.1878,
+          "std_reward": 182.88,
+          "ci95_reward": 11.335,
+          "mean_cr": 0.631,
+          "std_cr": 0.3081,
+          "ci95_cr": 0.0191,
+          "mean_stores": 3.54,
+          "ci95_stores": 0.1051,
+          "mean_time": 77.375,
+          "mean_premium": -1.6688,
+          "mean_pref": 2.9207,
+          "mean_expiry": 3.4609,
+          "success_rate": 0.131
+        }
+      }
+    },
+    "avail_prob": {
+      "0.4": {
+        "Q-Learning": {
+          "mean_reward": -101.8991,
+          "std_reward": 100.5478,
+          "ci95_reward": 6.232,
+          "mean_cr": 0.454,
+          "std_cr": 0.1615,
+          "ci95_cr": 0.01,
+          "mean_stores": 1.01,
+          "ci95_stores": 0.0062,
+          "mean_time": 15.2,
+          "mean_premium": -5.2245,
+          "mean_pref": 3.1785,
+          "mean_expiry": 3.4702,
+          "success_rate": 0.001
+        },
+        "SARSA": {
+          "mean_reward": -143.8869,
+          "std_reward": 87.8843,
+          "ci95_reward": 5.4471,
+          "mean_cr": 0.3669,
+          "std_cr": 0.131,
+          "ci95_cr": 0.0081,
+          "mean_stores": 1.001,
+          "ci95_stores": 0.002,
+          "mean_time": 15.02,
+          "mean_premium": -7.5,
+          "mean_pref": 2.9996,
+          "mean_expiry": 3.5274,
+          "success_rate": 0.0
+        },
+        "ExpSARSA": {
+          "mean_reward": -83.4016,
+          "std_reward": 108.0306,
+          "ci95_reward": 6.6958,
+          "mean_cr": 0.422,
+          "std_cr": 0.1477,
+          "ci95_cr": 0.0092,
+          "mean_stores": 1.003,
+          "ci95_stores": 0.0034,
+          "mean_time": 15.06,
+          "mean_premium": -10.2861,
+          "mean_pref": 2.9594,
+          "mean_expiry": 3.5046,
+          "success_rate": 0.0
+        },
+        "DQN": {
+          "mean_reward": 348.6528,
+          "std_reward": 90.2045,
+          "ci95_reward": 5.5909,
+          "mean_cr": 0.8787,
+          "std_cr": 0.0683,
+          "ci95_cr": 0.0042,
+          "mean_stores": 3.588,
+          "ci95_stores": 0.0526,
+          "mean_time": 102.92,
+          "mean_premium": -14.9696,
+          "mean_pref": 3.4841,
+          "mean_expiry": 3.4949,
+          "success_rate": 0.025
+        },
+        "DoubleDQN": {
+          "mean_reward": 251.7967,
+          "std_reward": 105.1605,
+          "ci95_reward": 6.5179,
+          "mean_cr": 0.836,
+          "std_cr": 0.0794,
+          "ci95_cr": 0.0049,
+          "mean_stores": 2.657,
+          "ci95_stores": 0.036,
+          "mean_time": 103.98,
+          "mean_premium": -12.3378,
+          "mean_pref": 3.1562,
+          "mean_expiry": 3.5203,
+          "success_rate": 0.011
+        },
+        "DuelingDQN": {
+          "mean_reward": 355.861,
+          "std_reward": 95.4696,
+          "ci95_reward": 5.9173,
+          "mean_cr": 0.9026,
+          "std_cr": 0.0772,
+          "ci95_cr": 0.0048,
+          "mean_stores": 3.588,
+          "ci95_stores": 0.036,
+          "mean_time": 102.055,
+          "mean_premium": -15.0099,
+          "mean_pref": 3.0681,
+          "mean_expiry": 3.4843,
+          "success_rate": 0.165
+        },
+        "PPO": {
+          "mean_reward": 48.7843,
+          "std_reward": 82.6189,
+          "ci95_reward": 5.1208,
+          "mean_cr": 0.8187,
+          "std_cr": 0.0899,
+          "ci95_cr": 0.0056,
+          "mean_stores": 3.124,
+          "ci95_stores": 0.0204,
+          "mean_time": 105.01,
+          "mean_premium": -0.7292,
+          "mean_pref": 3.1649,
+          "mean_expiry": 3.5002,
+          "success_rate": 0.022
+        },
+        "REINFORCE": {
+          "mean_reward": 160.0989,
+          "std_reward": 82.1325,
+          "ci95_reward": 5.0906,
+          "mean_cr": 0.8674,
+          "std_cr": 0.0811,
+          "ci95_cr": 0.005,
+          "mean_stores": 2.309,
+          "ci95_stores": 0.0327,
+          "mean_time": 105.1,
+          "mean_premium": -5.9629,
+          "mean_pref": 3.1073,
+          "mean_expiry": 3.5191,
+          "success_rate": 0.067
+        },
+        "A2C": {
+          "mean_reward": 77.7196,
+          "std_reward": 88.4678,
+          "ci95_reward": 5.4833,
+          "mean_cr": 0.781,
+          "std_cr": 0.0913,
+          "ci95_cr": 0.0057,
+          "mean_stores": 1.0,
+          "ci95_stores": 0.0,
+          "mean_time": 15.0,
+          "mean_premium": -2.5651,
+          "mean_pref": 3.1296,
+          "mean_expiry": 3.5204,
+          "success_rate": 0.006
+        },
+        "ValueIter": {
+          "mean_reward": 111.7998,
+          "std_reward": 78.3704,
+          "ci95_reward": 4.8574,
+          "mean_cr": 0.9515,
+          "std_cr": 0.0475,
+          "ci95_cr": 0.0029,
+          "mean_stores": 1.994,
+          "ci95_stores": 0.0048,
+          "mean_time": 78.98,
+          "mean_premium": 0.874,
+          "mean_pref": 3.4841,
+          "mean_expiry": 3.6637,
+          "success_rate": 0.37
+        },
+        "Greedy": {
+          "mean_reward": -15.4235,
+          "std_reward": 114.4722,
+          "ci95_reward": 7.0951,
+          "mean_cr": 0.7369,
+          "std_cr": 0.1599,
+          "ci95_cr": 0.0099,
+          "mean_stores": 3.604,
+          "ci95_stores": 0.0812,
+          "mean_time": 106.44,
+          "mean_premium": 1.5615,
+          "mean_pref": 4.1669,
+          "mean_expiry": 1.505,
+          "success_rate": 0.048
+        },
+        "TimeAware": {
+          "mean_reward": 182.6597,
+          "std_reward": 84.8551,
+          "ci95_reward": 5.2594,
+          "mean_cr": 0.964,
+          "std_cr": 0.089,
+          "ci95_cr": 0.0055,
+          "mean_stores": 5.529,
+          "ci95_stores": 0.0582,
+          "mean_time": 108.215,
+          "mean_premium": 0.1144,
+          "mean_pref": 4.2779,
+          "mean_expiry": 4.6699,
+          "success_rate": 0.716
+        },
+        "Freshness": {
+          "mean_reward": 118.4943,
+          "std_reward": 67.6061,
+          "ci95_reward": 4.1903,
+          "mean_cr": 0.9988,
+          "std_cr": 0.0081,
+          "ci95_cr": 0.0005,
+          "mean_stores": 6.0,
+          "ci95_stores": 0.0,
+          "mean_time": 115.0,
+          "mean_premium": 2.0598,
+          "mean_pref": 3.4893,
+          "mean_expiry": 3.0788,
+          "success_rate": 0.976
+        },
+        "BrandQuality": {
+          "mean_reward": -114.524,
+          "std_reward": 117.9097,
+          "ci95_reward": 7.3081,
+          "mean_cr": 0.5818,
+          "std_cr": 0.1729,
+          "ci95_cr": 0.0107,
+          "mean_stores": 3.021,
+          "ci95_stores": 0.0602,
+          "mean_time": 105.175,
+          "mean_premium": 3.5578,
+          "mean_pref": 4.6099,
+          "mean_expiry": 1.5416,
+          "success_rate": 0.004
+        },
+        "Random": {
+          "mean_reward": -110.9662,
+          "std_reward": 169.8095,
+          "ci95_reward": 10.5249,
+          "mean_cr": 0.5061,
+          "std_cr": 0.2881,
+          "ci95_cr": 0.0179,
+          "mean_stores": 3.38,
+          "ci95_stores": 0.0966,
+          "mean_time": 68.325,
+          "mean_premium": -1.8466,
+          "mean_pref": 2.8899,
+          "mean_expiry": 3.3289,
+          "success_rate": 0.018
+        }
+      },
+      "0.6": {
+        "Q-Learning": {
+          "mean_reward": 110.0452,
+          "std_reward": 163.2667,
+          "ci95_reward": 10.1194,
+          "mean_cr": 0.7489,
+          "std_cr": 0.2432,
+          "ci95_cr": 0.0151,
+          "mean_stores": 1.425,
+          "ci95_stores": 0.0346,
+          "mean_time": 23.55,
+          "mean_premium": -6.2635,
+          "mean_pref": 3.1826,
+          "mean_expiry": 3.5216,
+          "success_rate": 0.314
+        },
+        "SARSA": {
+          "mean_reward": 76.0399,
+          "std_reward": 193.7954,
+          "ci95_reward": 12.0116,
+          "mean_cr": 0.644,
+          "std_cr": 0.2636,
+          "ci95_cr": 0.0163,
+          "mean_stores": 1.273,
+          "ci95_stores": 0.031,
+          "mean_time": 20.475,
+          "mean_premium": -9.2085,
+          "mean_pref": 3.1422,
+          "mean_expiry": 3.5081,
+          "success_rate": 0.215
+        },
+        "ExpSARSA": {
+          "mean_reward": 176.3476,
+          "std_reward": 206.9343,
+          "ci95_reward": 12.8259,
+          "mean_cr": 0.7231,
+          "std_cr": 0.2521,
+          "ci95_cr": 0.0156,
+          "mean_stores": 1.35,
+          "ci95_stores": 0.0325,
+          "mean_time": 22.09,
+          "mean_premium": -12.149,
+          "mean_pref": 3.0417,
+          "mean_expiry": 3.5019,
+          "success_rate": 0.323
+        },
+        "DQN": {
+          "mean_reward": 336.034,
+          "std_reward": 101.0236,
+          "ci95_reward": 6.2615,
+          "mean_cr": 0.9445,
+          "std_cr": 0.0994,
+          "ci95_cr": 0.0062,
+          "mean_stores": 3.174,
+          "ci95_stores": 0.0551,
+          "mean_time": 106.555,
+          "mean_premium": -11.4483,
+          "mean_pref": 3.571,
+          "mean_expiry": 3.5003,
+          "success_rate": 0.455
+        },
+        "DoubleDQN": {
+          "mean_reward": 498.7915,
+          "std_reward": 97.6385,
+          "ci95_reward": 6.0517,
+          "mean_cr": 0.9677,
+          "std_cr": 0.0422,
+          "ci95_cr": 0.0026,
+          "mean_stores": 3.347,
+          "ci95_stores": 0.0426,
+          "mean_time": 96.335,
+          "mean_premium": -19.1942,
+          "mean_pref": 3.1888,
+          "mean_expiry": 3.5316,
+          "success_rate": 0.538
+        },
+        "DuelingDQN": {
+          "mean_reward": 382.0875,
+          "std_reward": 54.5714,
+          "ci95_reward": 3.3824,
+          "mean_cr": 0.9978,
+          "std_cr": 0.011,
+          "ci95_cr": 0.0007,
+          "mean_stores": 4.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -12.5077,
+          "mean_pref": 2.9187,
+          "mean_expiry": 3.4985,
+          "success_rate": 0.959
+        },
+        "PPO": {
+          "mean_reward": 119.6531,
+          "std_reward": 68.4857,
+          "ci95_reward": 4.2448,
+          "mean_cr": 0.951,
+          "std_cr": 0.0477,
+          "ci95_cr": 0.003,
+          "mean_stores": 3.015,
+          "ci95_stores": 0.0075,
+          "mean_time": 105.0,
+          "mean_premium": -0.4576,
+          "mean_pref": 3.1827,
+          "mean_expiry": 3.5119,
+          "success_rate": 0.362
+        },
+        "REINFORCE": {
+          "mean_reward": 258.4642,
+          "std_reward": 67.8094,
+          "ci95_reward": 4.2029,
+          "mean_cr": 0.9474,
+          "std_cr": 0.0506,
+          "ci95_cr": 0.0031,
+          "mean_stores": 2.322,
+          "ci95_stores": 0.0291,
+          "mean_time": 105.1,
+          "mean_premium": -8.3499,
+          "mean_pref": 3.0771,
+          "mean_expiry": 3.4907,
+          "success_rate": 0.351
+        },
+        "A2C": {
+          "mean_reward": 166.8234,
+          "std_reward": 69.035,
+          "ci95_reward": 4.2788,
+          "mean_cr": 0.9964,
+          "std_cr": 0.0133,
+          "ci95_cr": 0.0008,
+          "mean_stores": 2.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -2.5423,
+          "mean_pref": 2.8293,
+          "mean_expiry": 3.4995,
+          "success_rate": 0.93
+        },
+        "ValueIter": {
+          "mean_reward": 138.2965,
+          "std_reward": 65.1985,
+          "ci95_reward": 4.041,
+          "mean_cr": 0.9958,
+          "std_cr": 0.0145,
+          "ci95_cr": 0.0009,
+          "mean_stores": 1.762,
+          "ci95_stores": 0.0264,
+          "mean_time": 35.98,
+          "mean_premium": 2.2008,
+          "mean_pref": 3.7764,
+          "mean_expiry": 3.7396,
+          "success_rate": 0.918
+        },
+        "Greedy": {
+          "mean_reward": 80.4151,
+          "std_reward": 99.2013,
+          "ci95_reward": 6.1486,
+          "mean_cr": 0.8962,
+          "std_cr": 0.1126,
+          "ci95_cr": 0.007,
+          "mean_stores": 4.415,
+          "ci95_stores": 0.0919,
+          "mean_time": 109.15,
+          "mean_premium": 1.4595,
+          "mean_pref": 4.2427,
+          "mean_expiry": 1.5073,
+          "success_rate": 0.331
+        },
+        "TimeAware": {
+          "mean_reward": 209.0206,
+          "std_reward": 68.7746,
+          "ci95_reward": 4.2627,
+          "mean_cr": 0.9926,
+          "std_cr": 0.0444,
+          "ci95_cr": 0.0028,
+          "mean_stores": 5.874,
+          "ci95_stores": 0.0374,
+          "mean_time": 112.855,
+          "mean_premium": 0.1404,
+          "mean_pref": 4.4527,
+          "mean_expiry": 4.8319,
+          "success_rate": 0.954
+        },
+        "Freshness": {
+          "mean_reward": 81.951,
+          "std_reward": 64.5285,
+          "ci95_reward": 3.9995,
+          "mean_cr": 1.0,
+          "std_cr": 0.0,
+          "ci95_cr": 0.0,
+          "mean_stores": 6.0,
+          "ci95_stores": 0.0,
+          "mean_time": 115.0,
+          "mean_premium": 3.7757,
+          "mean_pref": 3.4909,
+          "mean_expiry": 2.7831,
+          "success_rate": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": 6.7447,
+          "std_reward": 105.7916,
+          "ci95_reward": 6.557,
+          "mean_cr": 0.8002,
+          "std_cr": 0.1436,
+          "ci95_cr": 0.0089,
+          "mean_stores": 3.735,
+          "ci95_stores": 0.0763,
+          "mean_time": 106.325,
+          "mean_premium": 3.3794,
+          "mean_pref": 4.6377,
+          "mean_expiry": 1.533,
+          "success_rate": 0.088
+        },
+        "Random": {
+          "mean_reward": -33.9033,
+          "std_reward": 180.4952,
+          "ci95_reward": 11.1872,
+          "mean_cr": 0.6286,
+          "std_cr": 0.301,
+          "ci95_cr": 0.0187,
+          "mean_stores": 3.383,
+          "ci95_stores": 0.0953,
+          "mean_time": 68.42,
+          "mean_premium": -2.0087,
+          "mean_pref": 2.9619,
+          "mean_expiry": 3.4681,
+          "success_rate": 0.126
+        }
+      },
+      "0.8": {
+        "Q-Learning": {
+          "mean_reward": 303.024,
+          "std_reward": 112.8916,
+          "ci95_reward": 6.9971,
+          "mean_cr": 0.9534,
+          "std_cr": 0.1396,
+          "ci95_cr": 0.0087,
+          "mean_stores": 1.908,
+          "ci95_stores": 0.024,
+          "mean_time": 33.19,
+          "mean_premium": -8.977,
+          "mean_pref": 3.11,
+          "mean_expiry": 3.5093,
+          "success_rate": 0.865
+        },
+        "SARSA": {
+          "mean_reward": 345.8743,
+          "std_reward": 121.3524,
+          "ci95_reward": 7.5215,
+          "mean_cr": 0.9487,
+          "std_cr": 0.1435,
+          "ci95_cr": 0.0089,
+          "mean_stores": 1.425,
+          "ci95_stores": 0.0323,
+          "mean_time": 23.515,
+          "mean_premium": -11.3113,
+          "mean_pref": 3.1481,
+          "mean_expiry": 3.506,
+          "success_rate": 0.837
+        },
+        "ExpSARSA": {
+          "mean_reward": 417.4547,
+          "std_reward": 117.517,
+          "ci95_reward": 7.2838,
+          "mean_cr": 0.9585,
+          "std_cr": 0.1261,
+          "ci95_cr": 0.0078,
+          "mean_stores": 1.442,
+          "ci95_stores": 0.0354,
+          "mean_time": 23.865,
+          "mean_premium": -14.5084,
+          "mean_pref": 3.2123,
+          "mean_expiry": 3.5023,
+          "success_rate": 0.862
+        },
+        "DQN": {
+          "mean_reward": 490.4716,
+          "std_reward": 43.2287,
+          "ci95_reward": 2.6793,
+          "mean_cr": 0.9811,
+          "std_cr": 0.0286,
+          "ci95_cr": 0.0018,
+          "mean_stores": 3.513,
+          "ci95_stores": 0.0407,
+          "mean_time": 90.3,
+          "mean_premium": -17.2904,
+          "mean_pref": 3.5536,
+          "mean_expiry": 3.5052,
+          "success_rate": 0.662
+        },
+        "DoubleDQN": {
+          "mean_reward": 376.7028,
+          "std_reward": 46.0901,
+          "ci95_reward": 2.8567,
+          "mean_cr": 0.9895,
+          "std_cr": 0.0241,
+          "ci95_cr": 0.0015,
+          "mean_stores": 3.162,
+          "ci95_stores": 0.0228,
+          "mean_time": 105.165,
+          "mean_premium": -12.0032,
+          "mean_pref": 3.3223,
+          "mean_expiry": 3.5194,
+          "success_rate": 0.821
+        },
+        "DuelingDQN": {
+          "mean_reward": 264.9404,
+          "std_reward": 43.2629,
+          "ci95_reward": 2.6815,
+          "mean_cr": 0.9998,
+          "std_cr": 0.0027,
+          "ci95_cr": 0.0002,
+          "mean_stores": 3.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -5.7765,
+          "mean_pref": 3.4629,
+          "mean_expiry": 3.4993,
+          "success_rate": 0.997
+        },
+        "PPO": {
+          "mean_reward": 163.2666,
+          "std_reward": 60.9972,
+          "ci95_reward": 3.7806,
+          "mean_cr": 0.9935,
+          "std_cr": 0.0199,
+          "ci95_cr": 0.0012,
+          "mean_stores": 3.109,
+          "ci95_stores": 0.0193,
+          "mean_time": 105.025,
+          "mean_premium": -1.5171,
+          "mean_pref": 3.128,
+          "mean_expiry": 3.4982,
+          "success_rate": 0.884
+        },
+        "REINFORCE": {
+          "mean_reward": 278.8336,
+          "std_reward": 48.1259,
+          "ci95_reward": 2.9829,
+          "mean_cr": 0.996,
+          "std_cr": 0.0155,
+          "ci95_cr": 0.001,
+          "mean_stores": 3.518,
+          "ci95_stores": 0.0371,
+          "mean_time": 105.05,
+          "mean_premium": -7.2323,
+          "mean_pref": 3.0736,
+          "mean_expiry": 3.501,
+          "success_rate": 0.928
+        },
+        "A2C": {
+          "mean_reward": 143.5263,
+          "std_reward": 54.9757,
+          "ci95_reward": 3.4074,
+          "mean_cr": 0.9908,
+          "std_cr": 0.0207,
+          "ci95_cr": 0.0013,
+          "mean_stores": 1.0,
+          "ci95_stores": 0.0,
+          "mean_time": 15.0,
+          "mean_premium": 0.5162,
+          "mean_pref": 3.0978,
+          "mean_expiry": 3.4993,
+          "success_rate": 0.827
+        },
+        "ValueIter": {
+          "mean_reward": 125.6824,
+          "std_reward": 56.066,
+          "ci95_reward": 3.475,
+          "mean_cr": 1.0,
+          "std_cr": 0.0016,
+          "ci95_cr": 0.0001,
+          "mean_stores": 1.166,
+          "ci95_stores": 0.0231,
+          "mean_time": 18.39,
+          "mean_premium": 3.7751,
+          "mean_pref": 4.0776,
+          "mean_expiry": 3.847,
+          "success_rate": 0.999
+        },
+        "Greedy": {
+          "mean_reward": 126.9884,
+          "std_reward": 86.8691,
+          "ci95_reward": 5.3842,
+          "mean_cr": 0.9637,
+          "std_cr": 0.068,
+          "ci95_cr": 0.0042,
+          "mean_stores": 5.162,
+          "ci95_stores": 0.0833,
+          "mean_time": 112.105,
+          "mean_premium": 1.2973,
+          "mean_pref": 4.306,
+          "mean_expiry": 1.5021,
+          "success_rate": 0.665
+        },
+        "TimeAware": {
+          "mean_reward": 218.5376,
+          "std_reward": 60.3321,
+          "ci95_reward": 3.7394,
+          "mean_cr": 0.998,
+          "std_cr": 0.0228,
+          "ci95_cr": 0.0014,
+          "mean_stores": 5.965,
+          "ci95_stores": 0.0215,
+          "mean_time": 114.325,
+          "mean_premium": 0.0378,
+          "mean_pref": 4.5303,
+          "mean_expiry": 4.924,
+          "success_rate": 0.99
+        },
+        "Freshness": {
+          "mean_reward": 64.1823,
+          "std_reward": 63.0561,
+          "ci95_reward": 3.9083,
+          "mean_cr": 1.0,
+          "std_cr": 0.0,
+          "ci95_cr": 0.0,
+          "mean_stores": 6.0,
+          "ci95_stores": 0.0,
+          "mean_time": 115.0,
+          "mean_premium": 4.5029,
+          "mean_pref": 3.5008,
+          "mean_expiry": 2.4211,
+          "success_rate": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": 71.7171,
+          "std_reward": 91.6769,
+          "ci95_reward": 5.6822,
+          "mean_cr": 0.9155,
+          "std_cr": 0.0994,
+          "ci95_cr": 0.0062,
+          "mean_stores": 4.576,
+          "ci95_stores": 0.0864,
+          "mean_time": 109.41,
+          "mean_premium": 3.4563,
+          "mean_pref": 4.6712,
+          "mean_expiry": 1.5281,
+          "success_rate": 0.404
+        },
+        "Random": {
+          "mean_reward": 13.5457,
+          "std_reward": 182.8977,
+          "ci95_reward": 11.3361,
+          "mean_cr": 0.7039,
+          "std_cr": 0.2992,
+          "ci95_cr": 0.0185,
+          "mean_stores": 3.407,
+          "ci95_stores": 0.0951,
+          "mean_time": 69.07,
+          "mean_premium": -2.3262,
+          "mean_pref": 2.9958,
+          "mean_expiry": 3.4605,
+          "success_rate": 0.226
+        }
+      }
+    },
+    "n_goods": {
+      "10": {
+        "Q-Learning": {
+          "mean_reward": 162.3788,
+          "std_reward": 67.308,
+          "ci95_reward": 4.1718,
+          "mean_cr": 0.9417,
+          "std_cr": 0.1246,
+          "ci95_cr": 0.0077,
+          "mean_stores": 2.256,
+          "ci95_stores": 0.0341,
+          "mean_time": 40.335,
+          "mean_premium": -9.4404,
+          "mean_pref": 3.7166,
+          "mean_expiry": 3.5296,
+          "success_rate": 0.774
+        },
+        "SARSA": {
+          "mean_reward": 159.9401,
+          "std_reward": 76.8591,
+          "ci95_reward": 4.7638,
+          "mean_cr": 0.9353,
+          "std_cr": 0.1404,
+          "ci95_cr": 0.0087,
+          "mean_stores": 2.541,
+          "ci95_stores": 0.0481,
+          "mean_time": 46.015,
+          "mean_premium": -10.7078,
+          "mean_pref": 3.0642,
+          "mean_expiry": 3.4939,
+          "success_rate": 0.782
+        },
+        "ExpSARSA": {
+          "mean_reward": 202.7143,
+          "std_reward": 79.7128,
+          "ci95_reward": 4.9407,
+          "mean_cr": 0.9458,
+          "std_cr": 0.1299,
+          "ci95_cr": 0.0081,
+          "mean_stores": 2.454,
+          "ci95_stores": 0.0357,
+          "mean_time": 44.585,
+          "mean_premium": -14.4042,
+          "mean_pref": 3.2836,
+          "mean_expiry": 3.4826,
+          "success_rate": 0.803
+        },
+        "DQN": {
+          "mean_reward": 251.1459,
+          "std_reward": 38.3729,
+          "ci95_reward": 2.3784,
+          "mean_cr": 0.9744,
+          "std_cr": 0.0472,
+          "ci95_cr": 0.0029,
+          "mean_stores": 3.61,
+          "ci95_stores": 0.0365,
+          "mean_time": 87.18,
+          "mean_premium": -19.1641,
+          "mean_pref": 3.3627,
+          "mean_expiry": 3.5155,
+          "success_rate": 0.759
+        },
+        "DoubleDQN": {
+          "mean_reward": 220.4187,
+          "std_reward": 39.2551,
+          "ci95_reward": 2.4331,
+          "mean_cr": 0.9678,
+          "std_cr": 0.0529,
+          "ci95_cr": 0.0033,
+          "mean_stores": 2.818,
+          "ci95_stores": 0.0415,
+          "mean_time": 83.215,
+          "mean_premium": -16.3565,
+          "mean_pref": 3.5138,
+          "mean_expiry": 3.5352,
+          "success_rate": 0.706
+        },
+        "DuelingDQN": {
+          "mean_reward": 196.2411,
+          "std_reward": 43.7939,
+          "ci95_reward": 2.7144,
+          "mean_cr": 0.9845,
+          "std_cr": 0.0435,
+          "ci95_cr": 0.0027,
+          "mean_stores": 2.73,
+          "ci95_stores": 0.0458,
+          "mean_time": 73.64,
+          "mean_premium": -12.8198,
+          "mean_pref": 3.4816,
+          "mean_expiry": 3.5441,
+          "success_rate": 0.87
+        },
+        "PPO": {
+          "mean_reward": 12.5221,
+          "std_reward": 52.8411,
+          "ci95_reward": 3.2751,
+          "mean_cr": 0.8359,
+          "std_cr": 0.1501,
+          "ci95_cr": 0.0093,
+          "mean_stores": 2.557,
+          "ci95_stores": 0.0351,
+          "mean_time": 105.045,
+          "mean_premium": -1.2411,
+          "mean_pref": 2.8642,
+          "mean_expiry": 3.5117,
+          "success_rate": 0.244
+        },
+        "REINFORCE": {
+          "mean_reward": 96.5719,
+          "std_reward": 41.2117,
+          "ci95_reward": 2.5543,
+          "mean_cr": 0.9854,
+          "std_cr": 0.038,
+          "ci95_cr": 0.0024,
+          "mean_stores": 3.133,
+          "ci95_stores": 0.0484,
+          "mean_time": 105.34,
+          "mean_premium": -4.3867,
+          "mean_pref": 3.1607,
+          "mean_expiry": 3.5275,
+          "success_rate": 0.864
+        },
+        "A2C": {
+          "mean_reward": 111.384,
+          "std_reward": 46.6323,
+          "ci95_reward": 2.8903,
+          "mean_cr": 0.9333,
+          "std_cr": 0.0791,
+          "ci95_cr": 0.0049,
+          "mean_stores": 1.0,
+          "ci95_stores": 0.0,
+          "mean_time": 15.0,
+          "mean_premium": -5.1608,
+          "mean_pref": 3.2132,
+          "mean_expiry": 3.5298,
+          "success_rate": 0.505
+        },
+        "ValueIter": {
+          "mean_reward": 114.5678,
+          "std_reward": 53.024,
+          "ci95_reward": 3.2865,
+          "mean_cr": 0.9957,
+          "std_cr": 0.0203,
+          "ci95_cr": 0.0013,
+          "mean_stores": 1.51,
+          "ci95_stores": 0.031,
+          "mean_time": 28.21,
+          "mean_premium": -2.3516,
+          "mean_pref": 3.7951,
+          "mean_expiry": 3.7433,
+          "success_rate": 0.957
+        },
+        "Greedy": {
+          "mean_reward": 34.7386,
+          "std_reward": 61.3449,
+          "ci95_reward": 3.8022,
+          "mean_cr": 0.9396,
+          "std_cr": 0.1057,
+          "ci95_cr": 0.0066,
+          "mean_stores": 5.302,
+          "ci95_stores": 0.0753,
+          "mean_time": 112.255,
+          "mean_premium": 2.9977,
+          "mean_pref": 4.3162,
+          "mean_expiry": 1.5031,
+          "success_rate": 0.647
+        },
+        "TimeAware": {
+          "mean_reward": 69.3932,
+          "std_reward": 64.9829,
+          "ci95_reward": 4.0277,
+          "mean_cr": 0.9553,
+          "std_cr": 0.1313,
+          "ci95_cr": 0.0081,
+          "mean_stores": 5.565,
+          "ci95_stores": 0.0732,
+          "mean_time": 106.345,
+          "mean_premium": 2.2852,
+          "mean_pref": 4.5137,
+          "mean_expiry": 4.8908,
+          "success_rate": 0.87
+        },
+        "Freshness": {
+          "mean_reward": 39.6566,
+          "std_reward": 44.1218,
+          "ci95_reward": 2.7347,
+          "mean_cr": 1.0,
+          "std_cr": 0.0,
+          "ci95_cr": 0.0,
+          "mean_stores": 6.0,
+          "ci95_stores": 0.0,
+          "mean_time": 115.0,
+          "mean_premium": 3.6354,
+          "mean_pref": 3.6173,
+          "mean_expiry": 2.733,
+          "success_rate": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": 12.5671,
+          "std_reward": 81.2439,
+          "ci95_reward": 5.0356,
+          "mean_cr": 0.8055,
+          "std_cr": 0.1796,
+          "ci95_cr": 0.0111,
+          "mean_stores": 4.042,
+          "ci95_stores": 0.0907,
+          "mean_time": 108.005,
+          "mean_premium": 1.4265,
+          "mean_pref": 4.5902,
+          "mean_expiry": 1.5573,
+          "success_rate": 0.255
+        },
+        "Random": {
+          "mean_reward": -40.5659,
+          "std_reward": 93.8318,
+          "ci95_reward": 5.8158,
+          "mean_cr": 0.6342,
+          "std_cr": 0.3213,
+          "ci95_cr": 0.0199,
+          "mean_stores": 3.418,
+          "ci95_stores": 0.0954,
+          "mean_time": 69.54,
+          "mean_premium": 1.6521,
+          "mean_pref": 2.8351,
+          "mean_expiry": 3.3565,
+          "success_rate": 0.2
+        }
+      },
+      "20": {
+        "Q-Learning": {
+          "mean_reward": 110.0452,
+          "std_reward": 163.2667,
+          "ci95_reward": 10.1194,
+          "mean_cr": 0.7489,
+          "std_cr": 0.2432,
+          "ci95_cr": 0.0151,
+          "mean_stores": 1.425,
+          "ci95_stores": 0.0346,
+          "mean_time": 23.55,
+          "mean_premium": -6.2635,
+          "mean_pref": 3.1826,
+          "mean_expiry": 3.5216,
+          "success_rate": 0.314
+        },
+        "SARSA": {
+          "mean_reward": 76.0399,
+          "std_reward": 193.7954,
+          "ci95_reward": 12.0116,
+          "mean_cr": 0.644,
+          "std_cr": 0.2636,
+          "ci95_cr": 0.0163,
+          "mean_stores": 1.273,
+          "ci95_stores": 0.031,
+          "mean_time": 20.475,
+          "mean_premium": -9.2085,
+          "mean_pref": 3.1422,
+          "mean_expiry": 3.5081,
+          "success_rate": 0.215
+        },
+        "ExpSARSA": {
+          "mean_reward": 176.3476,
+          "std_reward": 206.9343,
+          "ci95_reward": 12.8259,
+          "mean_cr": 0.7231,
+          "std_cr": 0.2521,
+          "ci95_cr": 0.0156,
+          "mean_stores": 1.35,
+          "ci95_stores": 0.0325,
+          "mean_time": 22.09,
+          "mean_premium": -12.149,
+          "mean_pref": 3.0417,
+          "mean_expiry": 3.5019,
+          "success_rate": 0.323
+        },
+        "DQN": {
+          "mean_reward": 336.034,
+          "std_reward": 101.0236,
+          "ci95_reward": 6.2615,
+          "mean_cr": 0.9445,
+          "std_cr": 0.0994,
+          "ci95_cr": 0.0062,
+          "mean_stores": 3.174,
+          "ci95_stores": 0.0551,
+          "mean_time": 106.555,
+          "mean_premium": -11.4483,
+          "mean_pref": 3.571,
+          "mean_expiry": 3.5003,
+          "success_rate": 0.455
+        },
+        "DoubleDQN": {
+          "mean_reward": 498.7915,
+          "std_reward": 97.6385,
+          "ci95_reward": 6.0517,
+          "mean_cr": 0.9677,
+          "std_cr": 0.0422,
+          "ci95_cr": 0.0026,
+          "mean_stores": 3.347,
+          "ci95_stores": 0.0426,
+          "mean_time": 96.335,
+          "mean_premium": -19.1942,
+          "mean_pref": 3.1888,
+          "mean_expiry": 3.5316,
+          "success_rate": 0.538
+        },
+        "DuelingDQN": {
+          "mean_reward": 382.0875,
+          "std_reward": 54.5714,
+          "ci95_reward": 3.3824,
+          "mean_cr": 0.9978,
+          "std_cr": 0.011,
+          "ci95_cr": 0.0007,
+          "mean_stores": 4.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -12.5077,
+          "mean_pref": 2.9187,
+          "mean_expiry": 3.4985,
+          "success_rate": 0.959
+        },
+        "PPO": {
+          "mean_reward": 119.6531,
+          "std_reward": 68.4857,
+          "ci95_reward": 4.2448,
+          "mean_cr": 0.951,
+          "std_cr": 0.0477,
+          "ci95_cr": 0.003,
+          "mean_stores": 3.015,
+          "ci95_stores": 0.0075,
+          "mean_time": 105.0,
+          "mean_premium": -0.4576,
+          "mean_pref": 3.1827,
+          "mean_expiry": 3.5119,
+          "success_rate": 0.362
+        },
+        "REINFORCE": {
+          "mean_reward": 258.4642,
+          "std_reward": 67.8094,
+          "ci95_reward": 4.2029,
+          "mean_cr": 0.9474,
+          "std_cr": 0.0506,
+          "ci95_cr": 0.0031,
+          "mean_stores": 2.322,
+          "ci95_stores": 0.0291,
+          "mean_time": 105.1,
+          "mean_premium": -8.3499,
+          "mean_pref": 3.0771,
+          "mean_expiry": 3.4907,
+          "success_rate": 0.351
+        },
+        "A2C": {
+          "mean_reward": 166.8234,
+          "std_reward": 69.035,
+          "ci95_reward": 4.2788,
+          "mean_cr": 0.9964,
+          "std_cr": 0.0133,
+          "ci95_cr": 0.0008,
+          "mean_stores": 2.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -2.5423,
+          "mean_pref": 2.8293,
+          "mean_expiry": 3.4995,
+          "success_rate": 0.93
+        },
+        "ValueIter": {
+          "mean_reward": 138.2965,
+          "std_reward": 65.1985,
+          "ci95_reward": 4.041,
+          "mean_cr": 0.9958,
+          "std_cr": 0.0145,
+          "ci95_cr": 0.0009,
+          "mean_stores": 1.762,
+          "ci95_stores": 0.0264,
+          "mean_time": 35.98,
+          "mean_premium": 2.2008,
+          "mean_pref": 3.7764,
+          "mean_expiry": 3.7396,
+          "success_rate": 0.918
+        },
+        "Greedy": {
+          "mean_reward": 80.4151,
+          "std_reward": 99.2013,
+          "ci95_reward": 6.1486,
+          "mean_cr": 0.8962,
+          "std_cr": 0.1126,
+          "ci95_cr": 0.007,
+          "mean_stores": 4.415,
+          "ci95_stores": 0.0919,
+          "mean_time": 109.15,
+          "mean_premium": 1.4595,
+          "mean_pref": 4.2427,
+          "mean_expiry": 1.5073,
+          "success_rate": 0.331
+        },
+        "TimeAware": {
+          "mean_reward": 209.0206,
+          "std_reward": 68.7746,
+          "ci95_reward": 4.2627,
+          "mean_cr": 0.9926,
+          "std_cr": 0.0444,
+          "ci95_cr": 0.0028,
+          "mean_stores": 5.874,
+          "ci95_stores": 0.0374,
+          "mean_time": 112.855,
+          "mean_premium": 0.1404,
+          "mean_pref": 4.4527,
+          "mean_expiry": 4.8319,
+          "success_rate": 0.954
+        },
+        "Freshness": {
+          "mean_reward": 81.951,
+          "std_reward": 64.5285,
+          "ci95_reward": 3.9995,
+          "mean_cr": 1.0,
+          "std_cr": 0.0,
+          "ci95_cr": 0.0,
+          "mean_stores": 6.0,
+          "ci95_stores": 0.0,
+          "mean_time": 115.0,
+          "mean_premium": 3.7757,
+          "mean_pref": 3.4909,
+          "mean_expiry": 2.7831,
+          "success_rate": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": 6.7447,
+          "std_reward": 105.7916,
+          "ci95_reward": 6.557,
+          "mean_cr": 0.8002,
+          "std_cr": 0.1436,
+          "ci95_cr": 0.0089,
+          "mean_stores": 3.735,
+          "ci95_stores": 0.0763,
+          "mean_time": 106.325,
+          "mean_premium": 3.3794,
+          "mean_pref": 4.6377,
+          "mean_expiry": 1.533,
+          "success_rate": 0.088
+        },
+        "Random": {
+          "mean_reward": -33.9033,
+          "std_reward": 180.4952,
+          "ci95_reward": 11.1872,
+          "mean_cr": 0.6286,
+          "std_cr": 0.301,
+          "ci95_cr": 0.0187,
+          "mean_stores": 3.383,
+          "ci95_stores": 0.0953,
+          "mean_time": 68.42,
+          "mean_premium": -2.0087,
+          "mean_pref": 2.9619,
+          "mean_expiry": 3.4681,
+          "success_rate": 0.126
+        }
+      },
+      "40": {
+        "Q-Learning": {
+          "mean_reward": -393.759,
+          "std_reward": 161.5554,
+          "ci95_reward": 10.0133,
+          "mean_cr": 0.286,
+          "std_cr": 0.1182,
+          "ci95_cr": 0.0073,
+          "mean_stores": 1.0,
+          "ci95_stores": 0.0,
+          "mean_time": 15.0,
+          "mean_premium": -7.3737,
+          "mean_pref": 3.3656,
+          "mean_expiry": 3.5113,
+          "success_rate": 0.0
+        },
+        "SARSA": {
+          "mean_reward": -322.757,
+          "std_reward": 227.4919,
+          "ci95_reward": 14.1001,
+          "mean_cr": 0.3358,
+          "std_cr": 0.1719,
+          "ci95_cr": 0.0107,
+          "mean_stores": 1.0,
+          "ci95_stores": 0.0,
+          "mean_time": 15.0,
+          "mean_premium": -9.0939,
+          "mean_pref": 2.7095,
+          "mean_expiry": 3.5081,
+          "success_rate": 0.0
+        },
+        "ExpSARSA": {
+          "mean_reward": -223.1139,
+          "std_reward": 282.6217,
+          "ci95_reward": 17.5171,
+          "mean_cr": 0.3813,
+          "std_cr": 0.1947,
+          "ci95_cr": 0.0121,
+          "mean_stores": 1.001,
+          "ci95_stores": 0.002,
+          "mean_time": 15.02,
+          "mean_premium": -10.0649,
+          "mean_pref": 3.2359,
+          "mean_expiry": 3.5284,
+          "success_rate": 0.016
+        },
+        "DQN": {
+          "mean_reward": 633.2101,
+          "std_reward": 73.4195,
+          "ci95_reward": 4.5506,
+          "mean_cr": 0.982,
+          "std_cr": 0.0205,
+          "ci95_cr": 0.0013,
+          "mean_stores": 3.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -8.4512,
+          "mean_pref": 3.4474,
+          "mean_expiry": 3.5121,
+          "success_rate": 0.483
+        },
+        "DoubleDQN": {
+          "mean_reward": 549.6517,
+          "std_reward": 94.8497,
+          "ci95_reward": 5.8788,
+          "mean_cr": 0.9757,
+          "std_cr": 0.0237,
+          "ci95_cr": 0.0015,
+          "mean_stores": 3.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -7.0313,
+          "mean_pref": 3.2102,
+          "mean_expiry": 3.4972,
+          "success_rate": 0.372
+        },
+        "DuelingDQN": {
+          "mean_reward": 461.4445,
+          "std_reward": 80.1964,
+          "ci95_reward": 4.9706,
+          "mean_cr": 0.9958,
+          "std_cr": 0.0098,
+          "ci95_cr": 0.0006,
+          "mean_stores": 2.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -3.8727,
+          "mean_pref": 3.3982,
+          "mean_expiry": 3.5039,
+          "success_rate": 0.841
+        },
+        "PPO": {
+          "mean_reward": 306.5799,
+          "std_reward": 87.269,
+          "ci95_reward": 5.409,
+          "mean_cr": 0.9888,
+          "std_cr": 0.0176,
+          "ci95_cr": 0.0011,
+          "mean_stores": 3.206,
+          "ci95_stores": 0.0273,
+          "mean_time": 105.015,
+          "mean_premium": -0.6046,
+          "mean_pref": 3.0945,
+          "mean_expiry": 3.5147,
+          "success_rate": 0.659
+        },
+        "REINFORCE": {
+          "mean_reward": 328.4139,
+          "std_reward": 89.5032,
+          "ci95_reward": 5.5475,
+          "mean_cr": 0.9526,
+          "std_cr": 0.0346,
+          "ci95_cr": 0.0021,
+          "mean_stores": 2.967,
+          "ci95_stores": 0.0111,
+          "mean_time": 105.0,
+          "mean_premium": -2.1978,
+          "mean_pref": 3.1531,
+          "mean_expiry": 3.5026,
+          "success_rate": 0.138
+        },
+        "A2C": {
+          "mean_reward": 289.2246,
+          "std_reward": 89.9312,
+          "ci95_reward": 5.574,
+          "mean_cr": 0.996,
+          "std_cr": 0.0097,
+          "ci95_cr": 0.0006,
+          "mean_stores": 2.0,
+          "ci95_stores": 0.0,
+          "mean_time": 105.0,
+          "mean_premium": -0.0381,
+          "mean_pref": 3.1484,
+          "mean_expiry": 3.5153,
+          "success_rate": 0.849
+        },
+        "ValueIter": {
+          "mean_reward": 253.6886,
+          "std_reward": 83.1803,
+          "ci95_reward": 5.1556,
+          "mean_cr": 0.9958,
+          "std_cr": 0.0102,
+          "ci95_cr": 0.0006,
+          "mean_stores": 1.932,
+          "ci95_stores": 0.0156,
+          "mean_time": 44.56,
+          "mean_premium": 2.8019,
+          "mean_pref": 3.7842,
+          "mean_expiry": 3.689,
+          "success_rate": 0.844
+        },
+        "Greedy": {
+          "mean_reward": 143.3235,
+          "std_reward": 136.1693,
+          "ci95_reward": 8.4399,
+          "mean_cr": 0.9028,
+          "std_cr": 0.0828,
+          "ci95_cr": 0.0051,
+          "mean_stores": 4.117,
+          "ci95_stores": 0.0731,
+          "mean_time": 106.905,
+          "mean_premium": 2.4575,
+          "mean_pref": 4.1569,
+          "mean_expiry": 1.4941,
+          "success_rate": 0.124
+        },
+        "TimeAware": {
+          "mean_reward": 380.5872,
+          "std_reward": 97.2116,
+          "ci95_reward": 6.0252,
+          "mean_cr": 0.9964,
+          "std_cr": 0.0178,
+          "ci95_cr": 0.0011,
+          "mean_stores": 5.887,
+          "ci95_stores": 0.03,
+          "mean_time": 113.285,
+          "mean_premium": 1.524,
+          "mean_pref": 4.4927,
+          "mean_expiry": 4.8202,
+          "success_rate": 0.942
+        },
+        "Freshness": {
+          "mean_reward": 301.7055,
+          "std_reward": 91.2785,
+          "ci95_reward": 5.6575,
+          "mean_cr": 1.0,
+          "std_cr": 0.0,
+          "ci95_cr": 0.0,
+          "mean_stores": 6.0,
+          "ci95_stores": 0.0,
+          "mean_time": 115.0,
+          "mean_premium": 0.9256,
+          "mean_pref": 3.6751,
+          "mean_expiry": 2.7363,
+          "success_rate": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": 149.1607,
+          "std_reward": 150.1348,
+          "ci95_reward": 9.3055,
+          "mean_cr": 0.8177,
+          "std_cr": 0.104,
+          "ci95_cr": 0.0064,
+          "mean_stores": 4.332,
+          "ci95_stores": 0.06,
+          "mean_time": 106.34,
+          "mean_premium": 0.3546,
+          "mean_pref": 4.5734,
+          "mean_expiry": 1.5046,
+          "success_rate": 0.005
+        },
+        "Random": {
+          "mean_reward": -113.1256,
+          "std_reward": 338.159,
+          "ci95_reward": 20.9593,
+          "mean_cr": 0.6221,
+          "std_cr": 0.2969,
+          "ci95_cr": 0.0184,
+          "mean_stores": 3.357,
+          "ci95_stores": 0.0955,
+          "mean_time": 67.6,
+          "mean_premium": -0.1195,
+          "mean_pref": 2.8897,
+          "mean_expiry": 3.471,
+          "success_rate": 0.055
+        }
+      }
+    }
+  },
+  "graph_experiments": {
+    "baseline_star": {
+      "distant_stores": {},
+      "agents": {
+        "Oracle": {
+          "mean_reward": 616.5199,
+          "ci95_reward": 1.1483,
+          "mean_cr": 1.0,
+          "success_rate": 1.0
+        },
+        "Q-Learning": {
+          "mean_reward": -78.2086,
+          "ci95_reward": 9.2687,
+          "mean_cr": 0.6261,
+          "success_rate": 0.259
+        },
+        "SARSA": {
+          "mean_reward": -92.5632,
+          "ci95_reward": 10.043,
+          "mean_cr": 0.601,
+          "success_rate": 0.255
+        },
+        "ExpSARSA": {
+          "mean_reward": -57.6381,
+          "ci95_reward": 9.9721,
+          "mean_cr": 0.6383,
+          "success_rate": 0.265
+        },
+        "DQN": {
+          "mean_reward": -0.5107,
+          "ci95_reward": 4.3653,
+          "mean_cr": 0.9325,
+          "success_rate": 0.288
+        },
+        "DoubleDQN": {
+          "mean_reward": 70.0748,
+          "ci95_reward": 4.1298,
+          "mean_cr": 0.9496,
+          "success_rate": 0.326
+        },
+        "DuelingDQN": {
+          "mean_reward": 64.266,
+          "ci95_reward": 4.1673,
+          "mean_cr": 0.9962,
+          "success_rate": 0.926
+        },
+        "PPO": {
+          "mean_reward": 43.8189,
+          "ci95_reward": 3.8838,
+          "mean_cr": 0.9454,
+          "success_rate": 0.327
+        },
+        "REINFORCE": {
+          "mean_reward": 6.1105,
+          "ci95_reward": 4.2978,
+          "mean_cr": 0.9538,
+          "success_rate": 0.383
+        },
+        "A2C": {
+          "mean_reward": 57.3221,
+          "ci95_reward": 3.3273,
+          "mean_cr": 0.9964,
+          "success_rate": 0.932
+        },
+        "ValueIter": {
+          "mean_reward": 94.2812,
+          "ci95_reward": 3.3171,
+          "mean_cr": 0.9964,
+          "success_rate": 0.932
+        },
+        "Greedy": {
+          "mean_reward": 64.0788,
+          "ci95_reward": 5.2965,
+          "mean_cr": 0.9203,
+          "success_rate": 0.319
+        },
+        "TimeAware": {
+          "mean_reward": 156.8284,
+          "ci95_reward": 4.3472,
+          "mean_cr": 0.9908,
+          "success_rate": 0.952
+        },
+        "Freshness": {
+          "mean_reward": 83.5985,
+          "ci95_reward": 3.5705,
+          "mean_cr": 1.0,
+          "success_rate": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": 35.3205,
+          "ci95_reward": 5.6707,
+          "mean_cr": 0.8233,
+          "success_rate": 0.062
+        },
+        "Random": {
+          "mean_reward": -87.4108,
+          "ci95_reward": 10.1201,
+          "mean_cr": 0.6284,
+          "success_rate": 0.116
+        }
+      }
+    },
+    "one_distant_store": {
+      "distant_stores": {
+        "5": 20
+      },
+      "agents": {
+        "Oracle": {
+          "mean_reward": 508.5189,
+          "ci95_reward": 4.1244,
+          "mean_cr": 0.886,
+          "success_rate": 0.069
+        },
+        "Q-Learning": {
+          "mean_reward": -78.7275,
+          "ci95_reward": 9.2413,
+          "mean_cr": 0.6251,
+          "success_rate": 0.239
+        },
+        "SARSA": {
+          "mean_reward": -92.5632,
+          "ci95_reward": 10.043,
+          "mean_cr": 0.601,
+          "success_rate": 0.255
+        },
+        "ExpSARSA": {
+          "mean_reward": -59.9394,
+          "ci95_reward": 9.8175,
+          "mean_cr": 0.6339,
+          "success_rate": 0.215
+        },
+        "DQN": {
+          "mean_reward": 4.7635,
+          "ci95_reward": 4.0492,
+          "mean_cr": 0.9327,
+          "success_rate": 0.246
+        },
+        "DoubleDQN": {
+          "mean_reward": 66.0345,
+          "ci95_reward": 4.551,
+          "mean_cr": 0.9387,
+          "success_rate": 0.312
+        },
+        "DuelingDQN": {
+          "mean_reward": 64.266,
+          "ci95_reward": 4.1673,
+          "mean_cr": 0.9962,
+          "success_rate": 0.926
+        },
+        "PPO": {
+          "mean_reward": -138.011,
+          "ci95_reward": 5.2737,
+          "mean_cr": 0.5367,
+          "success_rate": 0.008
+        },
+        "REINFORCE": {
+          "mean_reward": 37.0231,
+          "ci95_reward": 4.4924,
+          "mean_cr": 0.9569,
+          "success_rate": 0.435
+        },
+        "A2C": {
+          "mean_reward": 57.3221,
+          "ci95_reward": 3.3273,
+          "mean_cr": 0.9964,
+          "success_rate": 0.932
+        },
+        "ValueIter": {
+          "mean_reward": 94.2812,
+          "ci95_reward": 3.3171,
+          "mean_cr": 0.9964,
+          "success_rate": 0.932
+        },
+        "Greedy": {
+          "mean_reward": 62.7987,
+          "ci95_reward": 5.2541,
+          "mean_cr": 0.9166,
+          "success_rate": 0.279
+        },
+        "TimeAware": {
+          "mean_reward": 156.0529,
+          "ci95_reward": 4.3313,
+          "mean_cr": 0.9897,
+          "success_rate": 0.927
+        },
+        "Freshness": {
+          "mean_reward": 83.5679,
+          "ci95_reward": 3.5692,
+          "mean_cr": 1.0,
+          "success_rate": 0.999
+        },
+        "BrandQuality": {
+          "mean_reward": 33.1612,
+          "ci95_reward": 5.5968,
+          "mean_cr": 0.8175,
+          "success_rate": 0.037
+        },
+        "Random": {
+          "mean_reward": -85.3476,
+          "ci95_reward": 9.809,
+          "mean_cr": 0.6302,
+          "success_rate": 0.092
+        }
+      }
+    },
+    "two_distant_stores": {
+      "distant_stores": {
+        "4": 20,
+        "5": 20
+      },
+      "agents": {
+        "Oracle": {
+          "mean_reward": 402.7195,
+          "ci95_reward": 6.4369,
+          "mean_cr": 0.7795,
+          "success_rate": 0.021
+        },
+        "Q-Learning": {
+          "mean_reward": -78.9436,
+          "ci95_reward": 9.2281,
+          "mean_cr": 0.6247,
+          "success_rate": 0.235
+        },
+        "SARSA": {
+          "mean_reward": -93.3709,
+          "ci95_reward": 9.9915,
+          "mean_cr": 0.5997,
+          "success_rate": 0.234
+        },
+        "ExpSARSA": {
+          "mean_reward": -61.41,
+          "ci95_reward": 9.7124,
+          "mean_cr": 0.6322,
+          "success_rate": 0.183
+        },
+        "DQN": {
+          "mean_reward": 6.3481,
+          "ci95_reward": 4.1008,
+          "mean_cr": 0.9335,
+          "success_rate": 0.248
+        },
+        "DoubleDQN": {
+          "mean_reward": 66.4155,
+          "ci95_reward": 4.5543,
+          "mean_cr": 0.9389,
+          "success_rate": 0.315
+        },
+        "DuelingDQN": {
+          "mean_reward": 64.266,
+          "ci95_reward": 4.1673,
+          "mean_cr": 0.9962,
+          "success_rate": 0.926
+        },
+        "PPO": {
+          "mean_reward": -137.368,
+          "ci95_reward": 5.2842,
+          "mean_cr": 0.5379,
+          "success_rate": 0.008
+        },
+        "REINFORCE": {
+          "mean_reward": 37.0231,
+          "ci95_reward": 4.4924,
+          "mean_cr": 0.9569,
+          "success_rate": 0.435
+        },
+        "A2C": {
+          "mean_reward": 57.3221,
+          "ci95_reward": 3.3273,
+          "mean_cr": 0.9964,
+          "success_rate": 0.932
+        },
+        "ValueIter": {
+          "mean_reward": 94.2812,
+          "ci95_reward": 3.3171,
+          "mean_cr": 0.9964,
+          "success_rate": 0.932
+        },
+        "Greedy": {
+          "mean_reward": 62.0297,
+          "ci95_reward": 5.193,
+          "mean_cr": 0.908,
+          "success_rate": 0.228
+        },
+        "TimeAware": {
+          "mean_reward": 157.267,
+          "ci95_reward": 4.3498,
+          "mean_cr": 0.9901,
+          "success_rate": 0.909
+        },
+        "Freshness": {
+          "mean_reward": 85.5679,
+          "ci95_reward": 3.5692,
+          "mean_cr": 1.0,
+          "success_rate": 0.999
+        },
+        "BrandQuality": {
+          "mean_reward": 31.1909,
+          "ci95_reward": 5.4355,
+          "mean_cr": 0.8033,
+          "success_rate": 0.023
+        },
+        "Random": {
+          "mean_reward": -101.9328,
+          "ci95_reward": 10.4611,
+          "mean_cr": 0.5947,
+          "success_rate": 0.076
+        }
+      }
+    }
+  },
+  "brand_experiments": {
+    "baseline_5brands_3per": {
+      "n_brands": 5,
+      "brands_per_store": 3,
+      "agents": {
+        "Oracle": {
+          "mean_reward": 616.5199,
+          "ci95_reward": 1.1483,
+          "mean_cr": 1.0
+        },
+        "Q-Learning": {
+          "mean_reward": -78.2086,
+          "ci95_reward": 9.2687,
+          "mean_cr": 0.6261
+        },
+        "SARSA": {
+          "mean_reward": -92.5632,
+          "ci95_reward": 10.043,
+          "mean_cr": 0.601
+        },
+        "ExpSARSA": {
+          "mean_reward": -57.6381,
+          "ci95_reward": 9.9721,
+          "mean_cr": 0.6383
+        },
+        "DQN": {
+          "mean_reward": -0.5107,
+          "ci95_reward": 4.3653,
+          "mean_cr": 0.9325
+        },
+        "DoubleDQN": {
+          "mean_reward": 70.0748,
+          "ci95_reward": 4.1298,
+          "mean_cr": 0.9496
+        },
+        "DuelingDQN": {
+          "mean_reward": 64.266,
+          "ci95_reward": 4.1673,
+          "mean_cr": 0.9962
+        },
+        "PPO": {
+          "mean_reward": 43.8189,
+          "ci95_reward": 3.8838,
+          "mean_cr": 0.9454
+        },
+        "REINFORCE": {
+          "mean_reward": 6.1105,
+          "ci95_reward": 4.2978,
+          "mean_cr": 0.9538
+        },
+        "A2C": {
+          "mean_reward": 57.3221,
+          "ci95_reward": 3.3273,
+          "mean_cr": 0.9964
+        },
+        "ValueIter": {
+          "mean_reward": 94.2812,
+          "ci95_reward": 3.3171,
+          "mean_cr": 0.9964
+        },
+        "Greedy": {
+          "mean_reward": 64.0788,
+          "ci95_reward": 5.2965,
+          "mean_cr": 0.9203
+        },
+        "TimeAware": {
+          "mean_reward": 156.8284,
+          "ci95_reward": 4.3472,
+          "mean_cr": 0.9908
+        },
+        "Freshness": {
+          "mean_reward": 83.5985,
+          "ci95_reward": 3.5705,
+          "mean_cr": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": 35.3205,
+          "ci95_reward": 5.6707,
+          "mean_cr": 0.8233
+        },
+        "Random": {
+          "mean_reward": -83.0433,
+          "ci95_reward": 9.8222,
+          "mean_cr": 0.6374
+        }
+      }
+    },
+    "narrow_5brands_2per": {
+      "n_brands": 5,
+      "brands_per_store": 2,
+      "agents": {
+        "Oracle": {
+          "mean_reward": 595.7973,
+          "ci95_reward": 1.8041,
+          "mean_cr": 1.0
+        },
+        "Q-Learning": {
+          "mean_reward": -135.1996,
+          "ci95_reward": 8.5497,
+          "mean_cr": 0.3944
+        },
+        "SARSA": {
+          "mean_reward": -226.6115,
+          "ci95_reward": 6.8794,
+          "mean_cr": 0.2769
+        },
+        "ExpSARSA": {
+          "mean_reward": -173.3874,
+          "ci95_reward": 9.068,
+          "mean_cr": 0.3637
+        },
+        "DQN": {
+          "mean_reward": 8.5623,
+          "ci95_reward": 4.539,
+          "mean_cr": 0.8615
+        },
+        "DoubleDQN": {
+          "mean_reward": 114.2599,
+          "ci95_reward": 5.3731,
+          "mean_cr": 0.865
+        },
+        "DuelingDQN": {
+          "mean_reward": 115.9161,
+          "ci95_reward": 3.8086,
+          "mean_cr": 0.9179
+        },
+        "PPO": {
+          "mean_reward": 46.1465,
+          "ci95_reward": 4.4746,
+          "mean_cr": 0.8659
+        },
+        "REINFORCE": {
+          "mean_reward": -10.6484,
+          "ci95_reward": 4.4245,
+          "mean_cr": 0.8786
+        },
+        "A2C": {
+          "mean_reward": 126.6882,
+          "ci95_reward": 3.7918,
+          "mean_cr": 0.975
+        },
+        "ValueIter": {
+          "mean_reward": 176.4579,
+          "ci95_reward": 4.2428,
+          "mean_cr": 0.975
+        },
+        "Greedy": {
+          "mean_reward": 45.6972,
+          "ci95_reward": 6.0871,
+          "mean_cr": 0.8362
+        },
+        "TimeAware": {
+          "mean_reward": 190.3505,
+          "ci95_reward": 5.0209,
+          "mean_cr": 0.9697
+        },
+        "Freshness": {
+          "mean_reward": 176.7829,
+          "ci95_reward": 3.8322,
+          "mean_cr": 0.9998
+        },
+        "BrandQuality": {
+          "mean_reward": -5.0263,
+          "ci95_reward": 6.3404,
+          "mean_cr": 0.705
+        },
+        "Random": {
+          "mean_reward": -130.3816,
+          "ci95_reward": 10.3749,
+          "mean_cr": 0.504
+        }
+      }
+    },
+    "rich_10brands_3per": {
+      "n_brands": 10,
+      "brands_per_store": 3,
+      "agents": {
+        "Oracle": {
+          "mean_reward": 775.1965,
+          "ci95_reward": 1.2231,
+          "mean_cr": 1.0
+        },
+        "Q-Learning": {
+          "mean_reward": null,
+          "ci95_reward": null,
+          "mean_cr": null,
+          "note": "action_space_mismatch"
+        },
+        "SARSA": {
+          "mean_reward": null,
+          "ci95_reward": null,
+          "mean_cr": null,
+          "note": "action_space_mismatch"
+        },
+        "ExpSARSA": {
+          "mean_reward": null,
+          "ci95_reward": null,
+          "mean_cr": null,
+          "note": "action_space_mismatch"
+        },
+        "DQN": {
+          "mean_reward": null,
+          "ci95_reward": null,
+          "mean_cr": null,
+          "note": "action_space_mismatch"
+        },
+        "DoubleDQN": {
+          "mean_reward": null,
+          "ci95_reward": null,
+          "mean_cr": null,
+          "note": "action_space_mismatch"
+        },
+        "DuelingDQN": {
+          "mean_reward": null,
+          "ci95_reward": null,
+          "mean_cr": null,
+          "note": "action_space_mismatch"
+        },
+        "PPO": {
+          "mean_reward": null,
+          "ci95_reward": null,
+          "mean_cr": null,
+          "note": "action_space_mismatch"
+        },
+        "REINFORCE": {
+          "mean_reward": null,
+          "ci95_reward": null,
+          "mean_cr": null,
+          "note": "action_space_mismatch"
+        },
+        "A2C": {
+          "mean_reward": null,
+          "ci95_reward": null,
+          "mean_cr": null,
+          "note": "action_space_mismatch"
+        },
+        "ValueIter": {
+          "mean_reward": 315.0763,
+          "ci95_reward": 3.8692,
+          "mean_cr": 0.9958
+        },
+        "Greedy": {
+          "mean_reward": 280.8674,
+          "ci95_reward": 5.1815,
+          "mean_cr": 0.9625
+        },
+        "TimeAware": {
+          "mean_reward": 341.7807,
+          "ci95_reward": 4.5074,
+          "mean_cr": 0.9945
+        },
+        "Freshness": {
+          "mean_reward": 310.786,
+          "ci95_reward": 3.7384,
+          "mean_cr": 1.0
+        },
+        "BrandQuality": {
+          "mean_reward": 254.9189,
+          "ci95_reward": 6.5556,
+          "mean_cr": 0.8875
+        },
+        "Random": {
+          "mean_reward": 16.3527,
+          "ci95_reward": 13.0438,
+          "mean_cr": 0.6221
+        }
+      }
+    }
+  }
+}
